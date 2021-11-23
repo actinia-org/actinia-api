@@ -1,14 +1,15 @@
 language: python
 
-python: 3.6
+python: 3.7
 
 install:
-  - pip3 install --upgrade pip pep517 wheel
+  - pip3 install --upgrade pip build wheel
+
 
 jobs:
   include:
     - stage: build
-      script: python3 -m pep517.build --out-dir build .
+      script: python3 -m build --outdir build .
 
 deploy:
   provider: releases
