@@ -1,0 +1,1 @@
+    self.callable = self.load()
