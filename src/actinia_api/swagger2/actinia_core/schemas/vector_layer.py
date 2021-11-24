@@ -29,7 +29,7 @@ from copy import deepcopy
 from flask_restful_swagger_2 import Schema
 from actinia_core.models.response_models import \
     ProcessingResponseModel
-from actinia_api.swagger2.actinia_core.map_layer_base import SetRegionModel
+from actinia_api.swagger2.actinia_core.schemas.map_layer_base import SetRegionModel
 
 __license__ = "GPLv3"
 __author__ = "Sören Gebbert, Carmen Tawalika"
