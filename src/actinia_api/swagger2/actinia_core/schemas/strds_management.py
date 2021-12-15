@@ -76,8 +76,7 @@ class STRDSInfoModel(Schema):
     }
     example = {
         "aggregation_type": "None",
-        "band_names": "None",
-        "band_reference": "None",
+        "semantic_labels": "None",
         "bottom": "0.0",
         "creation_time": "2016-08-11 16:44:29.756411",
         "creator": "soeren",
@@ -98,7 +97,7 @@ class STRDSInfoModel(Schema):
         "north": "75.5",
         "nsres_max": "0.25",
         "nsres_min": "0.25",
-        "number_of_bands": "None",
+        "number_of_semantic_labels": "None",
         "number_of_maps": "762",
         "raster_register": "raster_map_register_934719ed2b4841818386a6f9c5f11b09",
         "semantic_type": "mean",
@@ -162,8 +161,7 @@ class STRDSInfoResponseModel(ProcessingResponseModel):
         ],
         "process_results": {
             "aggregation_type": "None",
-            "band_names": "None",
-            "band_reference": "None",
+            "semantic_labels": "None",
             "bottom": "0.0",
             "creation_time": "2017-12-29 15:58:40.020820",
             "creator": "soeren",
@@ -184,7 +182,7 @@ class STRDSInfoResponseModel(ProcessingResponseModel):
             "north": "75.5",
             "nsres_max": "0.25",
             "nsres_min": "0.25",
-            "number_of_bands": "None",
+            "number_of_semantic_labels": "None",
             "number_of_maps": "63",
             "raster_register": "raster_map_register_87e1edbaf2da4a27a03da04fa9f3a7f1",
             "semantic_type": "mean",
