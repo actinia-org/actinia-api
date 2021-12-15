@@ -43,8 +43,6 @@ class STRDSInfoModel(Schema):
     type = 'object'
     properties = {
         "aggregation_type": {'type': 'string'},
-        "band_names": {'type': 'string'},
-        "band_reference": {'type': 'string'},
         "bottom": {'type': 'string'},
         "creation_time": {'type': 'string'},
         "creator": {'type': 'string'},
@@ -63,11 +61,12 @@ class STRDSInfoModel(Schema):
         "modification_time": {'type': 'string'},
         "name": {'type': 'string'},
         "north": {'type': 'string'},
-        "number_of_bands": {'type': 'string'},
+        "number_of_semantic_labels": {'type': 'string'},
         "nsres_max": {'type': 'string'},
         "nsres_min": {'type': 'string'},
         "number_of_maps": {'type': 'string'},
         "raster_register": {'type': 'string'},
+        "semantic_labels": {'type': 'string'},
         "semantic_type": {'type': 'string'},
         "south": {'type': 'string'},
         "start_time": {'type': 'string'},
