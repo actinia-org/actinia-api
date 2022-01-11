@@ -67,7 +67,7 @@ class RasterInfoModel(Schema):
         'timestamp': {'type': 'string'},
         'title': {'type': 'string'},
         'west': {'type': 'string'},
-        'bandref': {'type': 'string'}
+        'semantic_label': {'type': 'string'}
     }
     example = {
         "cells": "2025000",
