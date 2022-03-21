@@ -25,12 +25,12 @@
 API docs for vector_layer
 """
 
-from actinia_core.core.common.app import URL_PREFIX
 from actinia_core.models.response_models import (
     ProcessingErrorResponseModel,
     ProcessingResponseModel,
 )
 
+from actinia_api import URL_PREFIX
 from actinia_api.swagger2.actinia_core.schemas.vector_layer import (
     VectorInfoResponseModel,
     VectorRegionCreationModel,
