@@ -41,7 +41,7 @@ __author__ = "Sören Gebbert, Carmen Tawalika, Anika Weinmann"
 __copyright__ = "Copyright 2016-2022, mundialis GmbH & Co. KG"
 __maintainer__ = "mundialis GmbH & Co. KG"
 
-strds_list_get_doc = {
+list_get_doc = {
     "tags": ["STRDS Management"],
     "description": "Get a list of all STRDS that are located in a specific "
     "location/mapset. Minimum required user role: user.",
