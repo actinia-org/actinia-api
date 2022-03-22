@@ -1,6 +1,6 @@
 from pkg_resources import get_distribution, DistributionNotFound
 
-API_VERSION = "v4"
+API_VERSION = "v3"
 
 # This is the URL prefix that must be used in the tests
 URL_PREFIX = "/api/%s" % API_VERSION
