@@ -59,6 +59,10 @@ The persistent database will not be modified. The ephemeral database will be
 removed after processing.
 Use the URL's provided in the finished response to download the resource that
 were specified in the process chain for export.
+
+This endpoint also allows the creation of STAC ITEMS through the
+ACTINIA STAC PLUGIN. The STAC item is stored in a dedicated
+CATALOG following the standard from STAC specification (https://stacspec.org/).
 """
 
 post_doc = {
