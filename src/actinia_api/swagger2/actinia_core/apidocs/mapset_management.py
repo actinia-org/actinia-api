@@ -107,10 +107,10 @@ get_user_doc = {
     },
 }
 
-get_admin_doc = {
+post_user_doc = {
     "tags": ["Mapset Management"],
     "description": "Create a new mapset in an existing location. Minimum "
-    "required user role: admin.",
+    "required user role: user.",
     "parameters": [
         {
             "name": "location_name",
@@ -139,10 +139,10 @@ get_admin_doc = {
     },
 }
 
-delete_admin_doc = {
+delete_user_doc = {
     "tags": ["Mapset Management"],
     "description": "Delete an existing mapset. Minimum required user role:"
-    " admin.",
+    " user.",
     "parameters": [
         {
             "name": "location_name",
