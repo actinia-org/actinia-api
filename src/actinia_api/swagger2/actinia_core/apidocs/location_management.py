@@ -87,7 +87,7 @@ get_user_doc = {
     },
 }
 
-get_admin_doc = {
+delete_admin_doc = {
     "tags": ["Location Management"],
     "description": "Delete an existing location and everything inside from the"
     " user database. Minimum required user role: admin.",
