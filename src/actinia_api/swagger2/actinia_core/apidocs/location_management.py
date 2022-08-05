@@ -87,10 +87,10 @@ get_user_doc = {
     },
 }
 
-delete_admin_doc = {
+delete_user_doc = {
     "tags": ["Location Management"],
     "description": "Delete an existing location and everything inside from the"
-    " user database. Minimum required user role: admin.",
+    " user database. Minimum required user role: user.",
     "parameters": [
         {
             "name": "location_name",
@@ -112,10 +112,10 @@ delete_admin_doc = {
     },
 }
 
-post_admin_doc = {
+post_user_doc = {
     "tags": ["Location Management"],
     "description": "Create a new location based on EPSG code in the user "
-    "database. Minimum required user role: admin.",
+    "database. Minimum required user role: user.",
     "consumes": ["application/json"],
     "parameters": [
         {
