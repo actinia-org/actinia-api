@@ -1,14 +1,8 @@
 name: Upload Python Package
 
-# on:
-#   release:
-#     types: [published]
-
 on:
-  push:
-    branches: [ pypi ]
-  pull_request:
-    branches: [ main ]
+  release:
+    types: [published]
 
 jobs:
   deploy:
@@ -33,19 +27,17 @@ jobs:
       with:
         files: build/*.whl
 
-    # - name: Publish package
+    # - name: Publish package to TestPyPI
     #   uses: pypa/gh-action-pypi-publish@release/v1
     #   with:
-    #     password: ${{ secrets.PYPI_API_TOKEN }}
+    #     password: ${{ secrets.TEST_PYPI_API_TOKEN }}
+    #     repository_url: https://test.pypi.org/legacy/
+    #     packages_dir: build/
+    #     verbose: true
 
-    - name: debug
-      run: |
-        ls -lah build/
-
-    - name: Publish package to TestPyPI
+    - name: Publish package
       uses: pypa/gh-action-pypi-publish@release/v1
       with:
-        password: ${{ secrets.TEST_PYPI_API_TOKEN }}
-        repository_url: https://test.pypi.org/legacy/
+        password: ${{ secrets.PYPI_API_TOKEN }}
         packages_dir: build/
         verbose: true

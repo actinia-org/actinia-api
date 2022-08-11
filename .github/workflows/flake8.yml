@@ -2,7 +2,7 @@ name: Python code quality check
 
 on:
   push:
-    branches: [ pypi ]
+    branches: [ main ]
   pull_request:
     branches: [ main ]
 
