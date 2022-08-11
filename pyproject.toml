@@ -4,20 +4,38 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "actinia-api"
-version = "3.2.0"
+version = "3.3.0"
 description = "API description for actinia-core and official plugins."
 readme = "README.md"
-authors = [{ name = "mundialis" }]
-license = { file = "LICENSE.txt" }
+authors = [
+    { name = "Anika Weinmann"},
+    { name = "Carmen Tawalika"},
+    { name = "Julia Haas"},
+    { name = "Markus Metz"},
+    { name = "Markus Neteler"},
+    { name = "Sören Gebbert"}
+]
 classifiers = [
     "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
     "Programming Language :: Python :: 3",
 ]
-keywords = ["processing", "earth observation", "grass gis"]
-dependencies = []
 requires-python = ">=3.8"
+keywords = ["processing", "earth observation", "grass gis"]
+dependencies = [
+    "flask-restful-swagger-2"
+]
+
+[project.optional-dependencies]
+test = [
+    "setuptools",
+    "pytest",
+    "ytest-cov"
+]
 
 [project.urls]
-Homepage = "https://github.com/mundialis/actinia_core"
+Homepage = "https://github.com/mundialis/actinia-api"
 Tutorial = "https://mundialis.github.io/actinia_core"
 API_Docs = "https://redocly.github.io/redoc/?url=https://actinia.mundialis.de/latest/swagger.json"
+
+[tool.flake8]
+max-line-length = 88

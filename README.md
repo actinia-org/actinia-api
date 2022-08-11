@@ -1,4 +1,4 @@
-API docs for actinia_core and plugins!
+API docs for actinia-core and plugins!
 
 OpenAPI is a project used to describe and document RESTful APIs.
 actinia is using swagger2, version upgrade is on the agena.
