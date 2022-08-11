@@ -27,4 +27,4 @@ jobs:
         pip install pyproject-flake8
     - name: Run Flake8
       run: |
-        pflake8 --config=.flake8 --count --statistics --show-source --jobs=$(nproc) .
+        pflake8 --count --statistics --show-source --jobs=$(nproc) .
