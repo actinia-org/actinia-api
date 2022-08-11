@@ -33,37 +33,37 @@ __maintainer__ = "mundialis"
 
 
 class MapsetSizeResponseModel(Schema):
-    """Response schema for mapset sizes of a resource
-    """
-    type = 'object'
+    """Response schema for mapset sizes of a resource"""
+
+    type = "object"
     properties = {
-        'status': {
-            'type': 'string',
-            'description': 'The status of the resource, values: success, error'
+        "status": {
+            "type": "string",
+            "description": "The status of the resource, values: success, error",
         },
-        'mapset_sizes': {
-            'type': 'array',
-            'items': {"type": "integer"},
-            'description': 'The list of mapset sizes of a resource in bytes'
-        }
+        "mapset_sizes": {
+            "type": "array",
+            "items": {"type": "integer"},
+            "description": "The list of mapset sizes of a resource in bytes",
+        },
     }
     example = {"mapset_sizes": [29946, 29946], "status": "success"}
     required = ["status", "mapset_sizes"]
 
 
 class MaxMapsetSizeResponseModel(Schema):
-    """Response schema for maximum mapset size of a resoucre
-    """
-    type = 'object'
+    """Response schema for maximum mapset size of a resoucre"""
+
+    type = "object"
     properties = {
-        'status': {
-            'type': 'string',
-            'description': 'The status of the resource, values: success, error'
+        "status": {
+            "type": "string",
+            "description": "The status of the resource, values: success, error",
         },
-        'max_mapset_size': {
-            'type': 'integer',
-            'description': 'The maximum mapset size of a resource in bytes'
-        }
+        "max_mapset_size": {
+            "type": "integer",
+            "description": "The maximum mapset size of a resource in bytes",
+        },
     }
     example = {"max_mapset_size": 29949, "status": "success"}
     required = ["status", "max_mapset_size"]

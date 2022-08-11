@@ -32,47 +32,51 @@ from actinia_core.models.response_models import ProcessingResponseModel
 
 __license__ = "GPLv3"
 __author__ = "Sören Gebbert, Carmen Tawalika"
-__copyright__ = "Copyright 2016-2021, Sören Gebbert and mundialis GmbH & Co. KG"
+__copyright__ = (
+    "Copyright 2016-2021, Sören Gebbert and mundialis GmbH & Co. KG"
+)
 __maintainer__ = "mundialis"
 
 
 class STRDSInfoModel(Schema):
-    """Schema that contains space-time raster dataset (STRDS) information
-    """
-    description = "Information about a specific space-time raster dataset (STRDS)"
-    type = 'object'
+    """Schema that contains space-time raster dataset (STRDS) information"""
+
+    description = (
+        "Information about a specific space-time raster dataset (STRDS)"
+    )
+    type = "object"
     properties = {
-        "aggregation_type": {'type': 'string'},
-        "bottom": {'type': 'string'},
-        "creation_time": {'type': 'string'},
-        "creator": {'type': 'string'},
-        "east": {'type': 'string'},
-        "end_time": {'type': 'string'},
-        "ewres_max": {'type': 'string'},
-        "ewres_min": {'type': 'string'},
-        "granularity": {'type': 'string'},
-        "id": {'type': 'string'},
-        "map_time": {'type': 'string'},
-        "mapset": {'type': 'string'},
-        "max_max": {'type': 'string'},
-        "max_min": {'type': 'string'},
-        "min_max": {'type': 'string'},
-        "min_min": {'type': 'string'},
-        "modification_time": {'type': 'string'},
-        "name": {'type': 'string'},
-        "north": {'type': 'string'},
-        "number_of_semantic_labels": {'type': 'string'},
-        "nsres_max": {'type': 'string'},
-        "nsres_min": {'type': 'string'},
-        "number_of_maps": {'type': 'string'},
-        "raster_register": {'type': 'string'},
-        "semantic_labels": {'type': 'string'},
-        "semantic_type": {'type': 'string'},
-        "south": {'type': 'string'},
-        "start_time": {'type': 'string'},
-        "temporal_type": {'type': 'string'},
-        "top": {'type': 'string'},
-        "west": {'type': 'string'}
+        "aggregation_type": {"type": "string"},
+        "bottom": {"type": "string"},
+        "creation_time": {"type": "string"},
+        "creator": {"type": "string"},
+        "east": {"type": "string"},
+        "end_time": {"type": "string"},
+        "ewres_max": {"type": "string"},
+        "ewres_min": {"type": "string"},
+        "granularity": {"type": "string"},
+        "id": {"type": "string"},
+        "map_time": {"type": "string"},
+        "mapset": {"type": "string"},
+        "max_max": {"type": "string"},
+        "max_min": {"type": "string"},
+        "min_max": {"type": "string"},
+        "min_min": {"type": "string"},
+        "modification_time": {"type": "string"},
+        "name": {"type": "string"},
+        "north": {"type": "string"},
+        "number_of_semantic_labels": {"type": "string"},
+        "nsres_max": {"type": "string"},
+        "nsres_min": {"type": "string"},
+        "number_of_maps": {"type": "string"},
+        "raster_register": {"type": "string"},
+        "semantic_labels": {"type": "string"},
+        "semantic_type": {"type": "string"},
+        "south": {"type": "string"},
+        "start_time": {"type": "string"},
+        "temporal_type": {"type": "string"},
+        "top": {"type": "string"},
+        "west": {"type": "string"},
     }
     example = {
         "aggregation_type": "None",
@@ -105,14 +109,14 @@ class STRDSInfoModel(Schema):
         "start_time": "1950-01-01 00:00:00",
         "temporal_type": "absolute",
         "top": "0.0",
-        "west": "-40.5"
+        "west": "-40.5",
     }
 
 
 class STRDSInfoResponseModel(ProcessingResponseModel):
-    """Response schema for STRDS information.
-    """
-    type = 'object'
+    """Response schema for STRDS information."""
+
+    type = "object"
     properties = deepcopy(ProcessingResponseModel.properties)
     properties["process_results"] = STRDSInfoModel
     required = deepcopy(ProcessingResponseModel.required)
@@ -124,23 +128,23 @@ class STRDSInfoResponseModel(ProcessingResponseModel):
             "endpoint": "strdsmanagementresource",
             "method": "GET",
             "path": "/locations/ECAD/mapsets/PERMANENT/strds/"
-                    "precipitation_1950_2013_yearly_mm",
+            "precipitation_1950_2013_yearly_mm",
             "request_url": "http://localhost:8080/locations/ECAD/mapsets/"
-                           "PERMANENT/strds/precipitation_1950_2013_yearly_mm"
+            "PERMANENT/strds/precipitation_1950_2013_yearly_mm",
         },
         "datetime": "2018-05-02 10:36:43.677867",
         "http_code": 200,
         "message": "Information gathering for STRDS "
-                   "<precipitation_1950_2013_yearly_mm> successful",
+        "<precipitation_1950_2013_yearly_mm> successful",
         "process_chain_list": [
             {
                 "1": {
                     "flags": "g",
                     "inputs": {
                         "input": "precipitation_1950_2013_yearly_mm",
-                        "type": "strds"
+                        "type": "strds",
                     },
-                    "module": "t.info"
+                    "module": "t.info",
                 }
             }
         ],
@@ -150,14 +154,13 @@ class STRDSInfoResponseModel(ProcessingResponseModel):
                 "parameter": [
                     "type=strds",
                     "input=precipitation_1950_2013_yearly_mm",
-                    "-g"
+                    "-g",
                 ],
                 "return_code": 0,
                 "run_time": 0.4944636821746826,
-                "stderr": [
-                    ""
-                ],
-                "stdout": "..."}
+                "stderr": [""],
+                "stdout": "...",
+            }
         ],
         "process_results": {
             "aggregation_type": "None",
@@ -190,12 +193,9 @@ class STRDSInfoResponseModel(ProcessingResponseModel):
             "start_time": "1950-01-01 00:00:00",
             "temporal_type": "absolute",
             "top": "0.0",
-            "west": "-40.5"
+            "west": "-40.5",
         },
-        "progress": {
-            "num_of_steps": 1,
-            "step": 1
-        },
+        "progress": {"num_of_steps": 1, "step": 1},
         "resource_id": "resource_id-1f178974-684d-417e-a3f4-878708b7382b",
         "status": "finished",
         "time_delta": 0.5580840110778809,
@@ -203,35 +203,37 @@ class STRDSInfoResponseModel(ProcessingResponseModel):
         "urls": {
             "resources": [],
             "status": "http://localhost:8080/resources/user/"
-                      "resource_id-1f178974-684d-417e-a3f4-878708b7382b"
+            "resource_id-1f178974-684d-417e-a3f4-878708b7382b",
         },
-        "user_id": "user"
+        "user_id": "user",
     }
 
 
 class STRDSCreationModel(Schema):
-    """Schema for STRDS creation
-    """
+    """Schema for STRDS creation"""
+
     description = "Information required to create a new STRDS"
-    type = 'object'
+    type = "object"
     properties = {
-        'title': {
-            'type': 'string',
-            'description': 'The title of the STRDS',
+        "title": {
+            "type": "string",
+            "description": "The title of the STRDS",
         },
-        'description': {
-            'type': 'string',
-            'description': 'The description of the STRDS',
+        "description": {
+            "type": "string",
+            "description": "The description of the STRDS",
         },
-        'temporaltype': {
-            'type': 'string',
-            'description': 'The temporal type of the STRDS, which can be '
-                           'absolute and relative',
-            'default': "absolute"
-        }
+        "temporaltype": {
+            "type": "string",
+            "description": "The temporal type of the STRDS, which can be "
+            "absolute and relative",
+            "default": "absolute",
+        },
     }
-    required = ['title', 'description']
-    example = {"title": "Monthly mean temperature from 1950-2010 for Germany",
-               "description": "Monthly mean temperature from 1950-2010 for Germany "
-                              "in degree celsius",
-               "ttype": "absolute"}
+    required = ["title", "description"]
+    example = {
+        "title": "Monthly mean temperature from 1950-2010 for Germany",
+        "description": "Monthly mean temperature from 1950-2010 for Germany "
+        "in degree celsius",
+        "ttype": "absolute",
+    }

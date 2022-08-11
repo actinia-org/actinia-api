@@ -27,85 +27,87 @@ Vector layer resources
 import random
 from copy import deepcopy
 from flask_restful_swagger_2 import Schema
-from actinia_core.models.response_models import \
-    ProcessingResponseModel
-from actinia_api.swagger2.actinia_core.schemas.map_layer_base import SetRegionModel
+from actinia_core.models.response_models import ProcessingResponseModel
+from actinia_api.swagger2.actinia_core.schemas.map_layer_base import (
+    SetRegionModel,
+)
 
 __license__ = "GPLv3"
 __author__ = "Sören Gebbert, Carmen Tawalika"
-__copyright__ = "Copyright 2016-2021, Sören Gebbert and mundialis GmbH & Co. KG"
+__copyright__ = (
+    "Copyright 2016-2021, Sören Gebbert and mundialis GmbH & Co. KG"
+)
 __maintainer__ = "mundialis"
 
 
 class VectorAttributeModel(Schema):
-    """Simple model that represent the description of vector attributes
-    """
+    """Simple model that represent the description of vector attributes"""
+
     description = "Description of a vector map layer attribute"
-    type = 'object'
-    properties = {'column': {'type': 'string'},
-                  'type': {'type': 'string'}}
+    type = "object"
+    properties = {"column": {"type": "string"}, "type": {"type": "string"}}
     example = {"cat": "INTEGER", "z": "DOUBLE PRECISION"}
 
 
 class VectorInfoModel(Schema):
-    """Schema that contains vector map layer information
-    """
+    """Schema that contains vector map layer information"""
+
     description = "Description of a GRASS GIS vector map layer"
-    type = 'object'
+    type = "object"
     properties = {
-        'Attributes': {'type': 'array', "items": VectorAttributeModel},
-        'COMMAND': {'type': 'string'},
-        'areas': {'type': 'string'},
-        'bottom': {'type': 'string'},
-        'boundaries': {'type': 'string'},
-        'centroids': {'type': 'string'},
-        'comment': {'type': 'string'},
-        'creator': {'type': 'string'},
-        'database': {'type': 'string'},
-        'digitization_threshold': {'type': 'string'},
-        'east': {'type': 'string'},
-        'faces': {'type': 'string'},
-        'format': {'type': 'string'},
-        'holes': {'type': 'string'},
-        'islands': {'type': 'string'},
-        'kernels': {'type': 'string'},
-        'level': {'type': 'string'},
-        'lines': {'type': 'string'},
-        'location': {'type': 'string'},
-        'map3d': {'type': 'string'},
-        'mapset': {'type': 'string'},
-        'name': {'type': 'string'},
-        'nodes': {'type': 'string'},
-        'north': {'type': 'string'},
-        'num_dblinks': {'type': 'string'},
-        'organization': {'type': 'string'},
-        'points': {'type': 'string'},
-        'primitives': {'type': 'string'},
-        'projection': {'type': 'string'},
-        'zone': {'type': 'string'},
-        'scale': {'type': 'string'},
-        'source_date': {'type': 'string'},
-        'south': {'type': 'string'},
-        'timestamp': {'type': 'string'},
-        'title': {'type': 'string'},
-        'top': {'type': 'string'},
-        'volumes': {'type': 'string'},
-        'west': {'type': 'string'},
-        'attribute_layer_name': {'type': 'string'},
-        'attribute_table': {'type': 'string'},
-        'attribute_database_driver': {'type': 'string'},
-        'attribute_database': {'type': 'string'},
-        'attribute_primary_key': {'type': 'string'},
-        'attribute_layer_number': {'type': 'string'},
+        "Attributes": {"type": "array", "items": VectorAttributeModel},
+        "COMMAND": {"type": "string"},
+        "areas": {"type": "string"},
+        "bottom": {"type": "string"},
+        "boundaries": {"type": "string"},
+        "centroids": {"type": "string"},
+        "comment": {"type": "string"},
+        "creator": {"type": "string"},
+        "database": {"type": "string"},
+        "digitization_threshold": {"type": "string"},
+        "east": {"type": "string"},
+        "faces": {"type": "string"},
+        "format": {"type": "string"},
+        "holes": {"type": "string"},
+        "islands": {"type": "string"},
+        "kernels": {"type": "string"},
+        "level": {"type": "string"},
+        "lines": {"type": "string"},
+        "location": {"type": "string"},
+        "map3d": {"type": "string"},
+        "mapset": {"type": "string"},
+        "name": {"type": "string"},
+        "nodes": {"type": "string"},
+        "north": {"type": "string"},
+        "num_dblinks": {"type": "string"},
+        "organization": {"type": "string"},
+        "points": {"type": "string"},
+        "primitives": {"type": "string"},
+        "projection": {"type": "string"},
+        "zone": {"type": "string"},
+        "scale": {"type": "string"},
+        "source_date": {"type": "string"},
+        "south": {"type": "string"},
+        "timestamp": {"type": "string"},
+        "title": {"type": "string"},
+        "top": {"type": "string"},
+        "volumes": {"type": "string"},
+        "west": {"type": "string"},
+        "attribute_layer_name": {"type": "string"},
+        "attribute_table": {"type": "string"},
+        "attribute_database_driver": {"type": "string"},
+        "attribute_database": {"type": "string"},
+        "attribute_primary_key": {"type": "string"},
+        "attribute_layer_number": {"type": "string"},
     }
     example = {
         "Attributes": [
             {"column": "cat", "type": "INTEGER"},
-            {"column": "z", "type": "DOUBLE PRECISION"}
+            {"column": "z", "type": "DOUBLE PRECISION"},
         ],
-        "COMMAND": " v.random -z output=\"test_layer\" npoints=1 layer=\"-1\" "
-                   "zmin=1.0 zmax=1.0 seed=1 column=\"z\" "
-                   "column_type=\"double precision\"",
+        "COMMAND": ' v.random -z output="test_layer" npoints=1 layer="-1" '
+        'zmin=1.0 zmax=1.0 seed=1 column="z" '
+        'column_type="double precision"',
         "areas": "0",
         "bottom": "1.000000",
         "boundaries": "0",
@@ -142,7 +144,7 @@ class VectorInfoModel(Schema):
         "volumes": "0",
         "west": "644375.544828422",
         "attribute_database": "/tmp/gisdbase_eabed7327ec84d219698670884136c2a/"
-                              "nc_spm_08/user1/vector/test_layer/sqlite.db",
+        "nc_spm_08/user1/vector/test_layer/sqlite.db",
         "attribute_database_driver": "sqlite",
         "attribute_layer_name": "test_layer",
         "attribute_layer_number": "1",
@@ -152,9 +154,9 @@ class VectorInfoModel(Schema):
 
 
 class VectorInfoResponseModel(ProcessingResponseModel):
-    """Response schema for vector map layer information.
-    """
-    type = 'object'
+    """Response schema for vector map layer information."""
+
+    type = "object"
     properties = deepcopy(ProcessingResponseModel.properties)
     properties["process_results"] = VectorInfoModel
     required = deepcopy(ProcessingResponseModel.required)
@@ -167,7 +169,7 @@ class VectorInfoResponseModel(ProcessingResponseModel):
             "method": "GET",
             "path": "/locations/nc_spm_08/mapsets/PERMANENT/vector_layers/geology",
             "request_url": "http://localhost:5000/locations/nc_spm_08/mapsets/"
-                           "PERMANENT/vector_layers/geology"
+            "PERMANENT/vector_layers/geology",
         },
         "datetime": "2018-05-06 21:36:54.032325",
         "http_code": 200,
@@ -176,113 +178,70 @@ class VectorInfoResponseModel(ProcessingResponseModel):
             {
                 "1": {
                     "flags": "gte",
-                    "inputs": {
-                        "map": "geology@PERMANENT"
-                    },
-                    "module": "v.info"
+                    "inputs": {"map": "geology@PERMANENT"},
+                    "module": "v.info",
                 },
                 "2": {
                     "flags": "h",
-                    "inputs": {
-                        "map": "geology@PERMANENT"
-                    },
-                    "module": "v.info"
+                    "inputs": {"map": "geology@PERMANENT"},
+                    "module": "v.info",
                 },
                 "3": {
                     "flags": "c",
-                    "inputs": {
-                        "map": "geology@PERMANENT"
-                    },
-                    "module": "v.info"
-                }
+                    "inputs": {"map": "geology@PERMANENT"},
+                    "module": "v.info",
+                },
             }
         ],
         "process_log": [
             {
                 "executable": "v.info",
-                "parameter": [
-                    "map=geology@PERMANENT",
-                    "-gte"
-                ],
+                "parameter": ["map=geology@PERMANENT", "-gte"],
                 "return_code": 0,
                 "run_time": 0.050188302993774414,
-                "stderr": [
-                    ""
-                ],
-                "stdout": "..."
+                "stderr": [""],
+                "stdout": "...",
             },
             {
                 "executable": "v.info",
-                "parameter": [
-                    "map=geology@PERMANENT",
-                    "-h"
-                ],
+                "parameter": ["map=geology@PERMANENT", "-h"],
                 "return_code": 0,
                 "run_time": 0.05018758773803711,
-                "stderr": [
-                    ""
-                ],
-                "stdout": "..."
+                "stderr": [""],
+                "stdout": "...",
             },
             {
                 "executable": "v.info",
-                "parameter": [
-                    "map=geology@PERMANENT",
-                    "-c"
-                ],
+                "parameter": ["map=geology@PERMANENT", "-c"],
                 "return_code": 0,
                 "run_time": 0.050185441970825195,
                 "stderr": [
                     "Displaying column types/names for database connection of "
                     "layer <1>:",
-                    ""
+                    "",
                 ],
-                "stdout": "..."
-            }
+                "stdout": "...",
+            },
         ],
         "process_results": {
             "Attributes": [
-                {
-                    "column": "cat",
-                    "type": "INTEGER"
-                },
-                {
-                    "column": "onemap_pro",
-                    "type": "DOUBLE PRECISION"
-                },
-                {
-                    "column": "PERIMETER",
-                    "type": "DOUBLE PRECISION"
-                },
-                {
-                    "column": "GEOL250_",
-                    "type": "INTEGER"
-                },
-                {
-                    "column": "GEOL250_ID",
-                    "type": "INTEGER"
-                },
-                {
-                    "column": "GEO_NAME",
-                    "type": "CHARACTER"
-                },
-                {
-                    "column": "SHAPE_area",
-                    "type": "DOUBLE PRECISION"
-                },
-                {
-                    "column": "SHAPE_len",
-                    "type": "DOUBLE PRECISION"
-                }
+                {"column": "cat", "type": "INTEGER"},
+                {"column": "onemap_pro", "type": "DOUBLE PRECISION"},
+                {"column": "PERIMETER", "type": "DOUBLE PRECISION"},
+                {"column": "GEOL250_", "type": "INTEGER"},
+                {"column": "GEOL250_ID", "type": "INTEGER"},
+                {"column": "GEO_NAME", "type": "CHARACTER"},
+                {"column": "SHAPE_area", "type": "DOUBLE PRECISION"},
+                {"column": "SHAPE_len", "type": "DOUBLE PRECISION"},
             ],
-            "COMMAND": " v.db.connect -o map=\"geology@PERMANENT\" "
-                       "driver=\"sqlite\" database=\"$GISDBASE/$LOCATION_NAME/"
-                       "$MAPSET/sqlite/sqlite.db\" table=\"geology\" key=\"cat\" "
-                       "layer=\"1\" separator=\"|\"",
+            "COMMAND": ' v.db.connect -o map="geology@PERMANENT" '
+            'driver="sqlite" database="$GISDBASE/$LOCATION_NAME/'
+            '$MAPSET/sqlite/sqlite.db" table="geology" key="cat" '
+            'layer="1" separator="|"',
             "areas": "1832",
             "attribute_database": "/home/soeren/actinia/workspace/temp_db/"
-                                  "gisdbase_d98fc0548fc44fac8fe43abd575e98cc/"
-                                  "nc_spm_08/PERMANENT/sqlite/sqlite.db",
+            "gisdbase_d98fc0548fc44fac8fe43abd575e98cc/"
+            "nc_spm_08/PERMANENT/sqlite/sqlite.db",
             "attribute_database_driver": "sqlite",
             "attribute_layer_name": "geology",
             "attribute_layer_number": "1",
@@ -294,7 +253,7 @@ class VectorInfoResponseModel(ProcessingResponseModel):
             "comment": "",
             "creator": "helena",
             "database": "/home/soeren/actinia/workspace/temp_db/"
-                        "gisdbase_d98fc0548fc44fac8fe43abd575e98cc",
+            "gisdbase_d98fc0548fc44fac8fe43abd575e98cc",
             "digitization_threshold": "0.000000",
             "east": "930172.312822711",
             "format": "native",
@@ -318,12 +277,9 @@ class VectorInfoResponseModel(ProcessingResponseModel):
             "timestamp": "none",
             "title": "North Carolina geology map (polygon map)",
             "top": "0.000000",
-            "west": "123971.194989783"
+            "west": "123971.194989783",
         },
-        "progress": {
-            "num_of_steps": 3,
-            "step": 3
-        },
+        "progress": {"num_of_steps": 3, "step": 3},
         "resource_id": "resource_id-5494af8c-8c9d-4f8e-a568-d6e86d69d8fd",
         "status": "finished",
         "time_delta": 0.20732927322387695,
@@ -331,54 +287,51 @@ class VectorInfoResponseModel(ProcessingResponseModel):
         "urls": {
             "resources": [],
             "status": "http://localhost:5000/resources/user/"
-                      "resource_id-5494af8c-8c9d-4f8e-a568-d6e86d69d8fd"
+            "resource_id-5494af8c-8c9d-4f8e-a568-d6e86d69d8fd",
         },
-        "user_id": "user"
+        "user_id": "user",
     }
 
 
 class VectorCreationModel(Schema):
-    """Schema for input parameters to generate a random point vector map layer
-    """
-    type = 'object'
+    """Schema for input parameters to generate a random point vector map layer"""
+
+    type = "object"
     properties = {
-        'npoints': {
-            'type': 'number',
-            'format': 'integer',
-            'description': 'Number of points to be created',
-            'default': 5
+        "npoints": {
+            "type": "number",
+            "format": "integer",
+            "description": "Number of points to be created",
+            "default": 5,
         },
-        'seed': {
-            'type': 'number',
-            'format': 'integer',
-            'description': 'The seed to initialize the random generator. '
-                           'If not set the process ID is used',
-            'default': random.randint(0, 1000000)
+        "seed": {
+            "type": "number",
+            "format": "integer",
+            "description": "The seed to initialize the random generator. "
+            "If not set the process ID is used",
+            "default": random.randint(0, 1000000),
         },
-        'zmin': {
-            'type': 'number',
-            'format': 'double',
-            'description': 'Minimum z height',
-            'default': 0.0
+        "zmin": {
+            "type": "number",
+            "format": "double",
+            "description": "Minimum z height",
+            "default": 0.0,
         },
-        'zmax': {
-            'type': 'number',
-            'format': 'double',
-            'description': 'Maximum z height',
-            'default': 100.0
-        }
+        "zmax": {
+            "type": "number",
+            "format": "double",
+            "description": "Maximum z height",
+            "default": 100.0,
+        },
     }
 
 
 class VectorRegionCreationModel(Schema):
-    """Schema for random vector generation in a specific region
-    """
-    type = 'object'
-    properties = {
-        'region': SetRegionModel,
-        'parameter': VectorCreationModel
+    """Schema for random vector generation in a specific region"""
+
+    type = "object"
+    properties = {"region": SetRegionModel, "parameter": VectorCreationModel}
+    example = {
+        "region": {"n": 228500, "s": 215000, "e": 645000, "w": 630000},
+        "parameter": {"npoints": 1, "zmin": 1, "zmax": 1, "seed": 1},
     }
-    example = {"region": {"n": 228500, "s": 215000,
-                          "e": 645000, "w": 630000},
-               "parameter": {"npoints": 1, "zmin": 1,
-                             "zmax": 1, "seed": 1}}

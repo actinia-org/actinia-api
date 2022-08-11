@@ -29,14 +29,16 @@ from actinia_core.models.response_models import ProcessingResponseModel
 
 __license__ = "GPLv3"
 __author__ = "Sören Gebbert, Carmen Tawalika"
-__copyright__ = "Copyright 2016-2021, Sören Gebbert and mundialis GmbH & Co. KG"
+__copyright__ = (
+    "Copyright 2016-2021, Sören Gebbert and mundialis GmbH & Co. KG"
+)
 __maintainer__ = "mundialis"
 
 
 class MapsetLockManagementResponseModel(ProcessingResponseModel):
-    """The response content that is returned by the GET request
-    """
-    type = 'object'
+    """The response content that is returned by the GET request"""
+
+    type = "object"
     properties = deepcopy(ProcessingResponseModel.properties)
     properties["process_results"] = {}
     properties["process_results"]["type"] = "boolean"
@@ -49,7 +51,7 @@ class MapsetLockManagementResponseModel(ProcessingResponseModel):
             "method": "GET",
             "path": "/locations/nc_spm_08/mapsets/PERMANENT/lock",
             "request_url": "http://localhost:8080/locations/nc_spm_08/mapsets/"
-                           "PERMANENT/lock"
+            "PERMANENT/lock",
         },
         "datetime": "2018-05-02 11:03:26.586348",
         "http_code": 200,
@@ -57,10 +59,7 @@ class MapsetLockManagementResponseModel(ProcessingResponseModel):
         "process_chain_list": [],
         "process_log": [],
         "process_results": False,
-        "progress": {
-            "num_of_steps": 0,
-            "step": 0
-        },
+        "progress": {"num_of_steps": 0, "step": 0},
         "resource_id": "resource_id-162101d9-2abc-417e-83ef-dc6f52ed7aaf",
         "status": "finished",
         "time_delta": 0.056743621826171875,
@@ -68,7 +67,7 @@ class MapsetLockManagementResponseModel(ProcessingResponseModel):
         "urls": {
             "resources": [],
             "status": "http://localhost:8080/resources/admin/"
-                      "resource_id-162101d9-2abc-417e-83ef-dc6f52ed7aaf"
+            "resource_id-162101d9-2abc-417e-83ef-dc6f52ed7aaf",
         },
-        "user_id": "admin"
+        "user_id": "admin",
     }

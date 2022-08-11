@@ -29,39 +29,44 @@ from flask_restful_swagger_2 import Schema
 
 __license__ = "GPLv3"
 __author__ = "Sören Gebbert, Carmen Tawalika"
-__copyright__ = "Copyright 2016-2021, Sören Gebbert and mundialis GmbH & Co. KG"
+__copyright__ = (
+    "Copyright 2016-2021, Sören Gebbert and mundialis GmbH & Co. KG"
+)
 __maintainer__ = "mundialis"
 
 
 class LocationListResponseModel(Schema):
-    """Response schema for location lists
-    """
-    type = 'object'
+    """Response schema for location lists"""
+
+    type = "object"
     properties = {
-        'status': {
-            'type': 'string',
-            'description': 'The status of the resource, values: accepted, '
-                           'running, finished, terminated, error'
+        "status": {
+            "type": "string",
+            "description": "The status of the resource, values: accepted, "
+            "running, finished, terminated, error",
         },
-        'locations': {
-            'type': 'array',
-            'items': {"type": "string"},
-            'description': 'The list of locations in the GRASS database'
-        }
+        "locations": {
+            "type": "array",
+            "items": {"type": "string"},
+            "description": "The list of locations in the GRASS database",
+        },
     }
-    example = {"locations": ["nc_spm_08", "latlong_wgs84", "ECAD"], "status": "success"}
+    example = {
+        "locations": ["nc_spm_08", "latlong_wgs84", "ECAD"],
+        "status": "success",
+    }
     required = ["status", "locations"]
 
 
 class ProjectionInfoModel(Schema):
-    """Schema to define projection information as JSON input in POST requests
-    """
-    type = 'object'
+    """Schema to define projection information as JSON input in POST requests"""
+
+    type = "object"
     properties = {
-        'epsg': {
-            'type': 'string',
-            'description': 'The EPSG code of the projection that should be used '
-                           'to create a location'
+        "epsg": {
+            "type": "string",
+            "description": "The EPSG code of the projection that should be used "
+            "to create a location",
         }
     }
     example = {"epsg": "4326"}

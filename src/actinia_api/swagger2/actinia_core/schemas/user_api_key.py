@@ -34,27 +34,28 @@ from flask_restful_swagger_2 import Schema
 
 __license__ = "GPLv3"
 __author__ = "Sören Gebbert, Carmen Tawalika"
-__copyright__ = "Copyright 2016-2021, Sören Gebbert and mundialis GmbH & Co. KG"
+__copyright__ = (
+    "Copyright 2016-2021, Sören Gebbert and mundialis GmbH & Co. KG"
+)
 __maintainer__ = "mundialis"
 
 
 class TokenResponseModel(Schema):
-    """Response schema that is used for authentication token generation.
+    """Response schema that is used for authentication token generation."""
 
-    """
-    type = 'object'
+    type = "object"
     properties = {
-        'status': {
-            'type': 'string',
-            'description': 'The status of the resource, values: success, error'
+        "status": {
+            "type": "string",
+            "description": "The status of the resource, values: success, error",
         },
-        'token': {
-            'type': 'string',
-            'description': 'The generated token for authentication'
+        "token": {
+            "type": "string",
+            "description": "The generated token for authentication",
         },
-        'message': {
-            'type': 'string',
-            'description': 'The message of the token generation'
-        }
+        "message": {
+            "type": "string",
+            "description": "The message of the token generation",
+        },
     }
     required = ["status", "token"]
