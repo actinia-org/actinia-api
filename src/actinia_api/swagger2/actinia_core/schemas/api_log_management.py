@@ -29,7 +29,9 @@ from flask_restful_swagger_2 import Schema
 
 __license__ = "GPLv3"
 __author__ = "Sören Gebbert, Carmen Tawalika"
-__copyright__ = "Copyright 2016-2021, Sören Gebbert and mundialis GmbH & Co. KG"
+__copyright__ = (
+    "Copyright 2016-2021, Sören Gebbert and mundialis GmbH & Co. KG"
+)
 __maintainer__ = "mundialis"
 
 
@@ -37,50 +39,52 @@ class ApiLogEntryModel(Schema):
     """Response schema for a single API log entry that is used to track all API
     calls of a user.
     """
-    type = 'object'
+
+    type = "object"
     properties = {
-        'time_stamp': {
-            'type': 'string',
-            'description': 'The time stamp of the API call'
+        "time_stamp": {
+            "type": "string",
+            "description": "The time stamp of the API call",
         },
-        'node': {
-            'type': 'string',
-            'description': 'The node that executed the API call'
+        "node": {
+            "type": "string",
+            "description": "The node that executed the API call",
         },
-        'endpoint': {
-            'type': 'string',
-            'description': 'The endpoint of the API call'
+        "endpoint": {
+            "type": "string",
+            "description": "The endpoint of the API call",
         },
-        'method': {
-            'type': 'string',
-            'description': 'The HTTP method of the request'
+        "method": {
+            "type": "string",
+            "description": "The HTTP method of the request",
         },
-        'path': {
-            'type': 'string',
-            'description': 'The path of the REST API call'
+        "path": {
+            "type": "string",
+            "description": "The path of the REST API call",
         },
-        'url': {
-            'type': 'string',
-            'description': 'The request URL'
-        },
-        'request_str': {
-            'type': 'string',
-            'description': 'The request string'
-        }
+        "url": {"type": "string", "description": "The request URL"},
+        "request_str": {"type": "string", "description": "The request string"},
     }
-    required = ["time_stamp", "node", "endpoint",
-                "method", "path", "url", "request_str"]
+    required = [
+        "time_stamp",
+        "node",
+        "endpoint",
+        "method",
+        "path",
+        "url",
+        "request_str",
+    ]
 
 
 class ApiLogListModel(Schema):
-    """Response schema that represents a list of API log entries.
-    """
-    type = 'object'
+    """Response schema that represents a list of API log entries."""
+
+    type = "object"
     properties = {
-        'api_log_list': {
-            'type': 'array',
-            'items': ApiLogEntryModel,
-            'description': 'A list of ApiLogEntryModel objects'
+        "api_log_list": {
+            "type": "array",
+            "items": ApiLogEntryModel,
+            "description": "A list of ApiLogEntryModel objects",
         }
     }
     required = ["api_log_list"]

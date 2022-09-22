@@ -27,11 +27,10 @@ API docs for process_chain_monitoring
 
 from actinia_core.models.response_models import SimpleResponseModel
 
-from actinia_api.swagger2.actinia_core.schemas.process_chain_monitoring \
-    import (
-        MapsetSizeResponseModel,
-        MaxMapsetSizeResponseModel,
-    )
+from actinia_api.swagger2.actinia_core.schemas.process_chain_monitoring import (
+    MapsetSizeResponseModel,
+    MaxMapsetSizeResponseModel,
+)
 
 
 __license__ = "GPLv3"
