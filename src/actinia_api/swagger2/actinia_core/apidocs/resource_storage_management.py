@@ -57,6 +57,18 @@ delete_doc = {
     "tags": ["Resource Management"],
     "description": "Clean the resource storage and remove all cached data. "
     "Minimum required user role: admin.",
+    "parameters": [
+        {
+            "name": "olderthan",
+            "description": "Number of days to delete the resource files. If "
+            "this parameter is set all resources older than this number of "
+            "days will be deleted.",
+            "required": False,
+            "in": "query",
+            "type": "number",
+            "format": "integer",
+        },
+    ],
     "responses": {
         "200": {
             "description": "Processing status of resource storage deletion",
