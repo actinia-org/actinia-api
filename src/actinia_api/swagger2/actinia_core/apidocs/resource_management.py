@@ -25,6 +25,7 @@
 API docs for resource_management
 """
 
+from actinia_core.core.common.process_chain import ProcessChainModel
 from actinia_core.models.response_models import (
     ProcessingResponseListModel,
     ProcessingResponseModel,
@@ -70,7 +71,18 @@ resource_get_doc = {
 
 resource_put_doc = {
     "tags": ["Resource Management"],
-    "description": "Updates/Resumes the status of a resource. "
+    "description": "Updates/Resumes the status of a failed resource. This "
+    "assumes that 'save_interim_results' is configured. "
+    "The job will restart at the step before the failed one and "
+    "execute these steps in the possibly corrected process chain sent along "
+    "with it. If 'save_interim_results' is set to 'True' the temporary mapset"
+    " is saved before the failed step and the resumption should work without "
+    "any problem. But if 'save_interim_results' is set to 'onError' the "
+    "temporary mapset is only saved if an error occurs and so the mapset "
+    "may contain changes from the failed step what may make resumption "
+    "difficult or impossible. In the event of such an error, the process chain"
+    " can then be adjusted so that the missing data is generated again, or the"
+    " entire process can be started as a new job."
     "Minimum required user role: user.",
     "parameters": [
         {
@@ -86,6 +98,13 @@ resource_put_doc = {
             "required": True,
             "in": "path",
             "type": "string",
+        },
+        {
+            "name": "process_chain",
+            "description": "The process chain that should be executed",
+            "required": True,
+            "in": "body",
+            "schema": ProcessChainModel,
         },
     ],
     "responses": {
