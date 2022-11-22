@@ -80,7 +80,9 @@ resource_put_doc = {
     "any problem. But if 'save_interim_results' is set to 'onError' the "
     "temporary mapset is only saved if an error occurs and so the mapset "
     "may contain changes from the failed step what may make resumption "
-    "difficult or impossible."
+    "difficult or impossible. In the event of such an error, the process chain"
+    " can then be adjusted so that the missing data is generated again, or the"
+    " entire process can be started as a new job."
     "Minimum required user role: user.",
     "parameters": [
         {
