@@ -59,6 +59,7 @@ class RasterInfoModel(Schema):
         "location": {"type": "string"},
         "map": {"type": "string"},
         "mapset": {"type": "string"},
+        "project": "nc_spm_08",
         "rows": {"type": "string"},
         "source1": {"type": "string"},
         "north": {"type": "string"},
