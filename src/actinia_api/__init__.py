@@ -1,4 +1,4 @@
-from pkg_resources import get_distribution, DistributionNotFound
+import importlib.metadata
 
 API_VERSION = "v3"
 
@@ -8,6 +8,6 @@ URL_PREFIX = "/api/%s" % API_VERSION
 try:
     # Change here if project is renamed and does not equal the package name
     dist_name = __name__
-    __version__ = get_distribution(dist_name).version
-except DistributionNotFound:
+    __version__ = importlib.metadata.version(dist_name)
+except Exception:
     __version__ = "unknown"
