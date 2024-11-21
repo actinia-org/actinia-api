@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "actinia-api"
-version = "3.4.1"
+version = "3.5.0"
 description = "API description for actinia-core and official plugins."
 readme = "README.md"
 authors = [
