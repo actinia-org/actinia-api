@@ -4,7 +4,7 @@
 # performance processing of geographical data that uses GRASS GIS for
 # computational tasks. For details, see https://actinia.mundialis.de/
 #
-# Copyright (c) 2016-2018 Sören Gebbert and mundialis GmbH & Co. KG
+# Copyright (c) 2016-2024 Sören Gebbert and mundialis GmbH & Co. KG
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -28,15 +28,17 @@ Models for location_management
 from flask_restful_swagger_2 import Schema
 
 __license__ = "GPLv3"
-__author__ = "Sören Gebbert, Carmen Tawalika"
+__author__ = "Sören Gebbert, Carmen Tawalika, Anika Weinmann"
 __copyright__ = (
-    "Copyright 2016-2021, Sören Gebbert and mundialis GmbH & Co. KG"
+    "Copyright 2016-2024, Sören Gebbert and mundialis GmbH & Co. KG"
 )
-__maintainer__ = "mundialis"
+__maintainer__ = "mundialis GmbH & Co. KG"
+
+from actinia_core.version import G_VERSION
 
 
 class LocationListResponseModel(Schema):
-    """Response schema for location lists"""
+    """Response schema for projects lists"""
 
     type = "object"
     properties = {
@@ -50,12 +52,23 @@ class LocationListResponseModel(Schema):
             "items": {"type": "string"},
             "description": "The list of locations in the GRASS database",
         },
+        "projects": {
+            "type": "array",
+            "items": {"type": "string"},
+            "description": "The list of projects in the GRASS database",
+        },
     }
     example = {
         "locations": ["nc_spm_08", "latlong_wgs84", "ECAD"],
+        "projects": ["nc_spm_08", "latlong_wgs84", "ECAD"],
         "status": "success",
     }
-    required = ["status", "locations"]
+    grass_version_s = G_VERSION["version"]
+    grass_version = [int(item) for item in grass_version_s.split(".")[:2]]
+    if grass_version < [8, 4]:
+        required = ["status", "locations"]
+    else:
+        required = ["status", "projects"]
 
 
 class ProjectionInfoModel(Schema):
