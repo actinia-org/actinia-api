@@ -13,6 +13,7 @@ authors = [
     { name = "Julia Haas"},
     { name = "Markus Metz"},
     { name = "Markus Neteler"},
+    { name = "Stefan Blumentrath"},
     { name = "Sören Gebbert"}
 ]
 classifiers = [
