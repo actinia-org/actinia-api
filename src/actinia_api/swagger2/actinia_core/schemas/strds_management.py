@@ -127,9 +127,9 @@ class STRDSInfoResponseModel(ProcessingResponseModel):
         "api_info": {
             "endpoint": "strdsmanagementresource",
             "method": "GET",
-            "path": "/locations/ECAD/mapsets/PERMANENT/strds/"
+            "path": "/projects/ECAD/mapsets/PERMANENT/strds/"
             "precipitation_1950_2013_yearly_mm",
-            "request_url": "http://localhost:8080/locations/ECAD/mapsets/"
+            "request_url": "http://localhost:8080/projects/ECAD/mapsets/"
             "PERMANENT/strds/precipitation_1950_2013_yearly_mm",
         },
         "datetime": "2018-05-02 10:36:43.677867",

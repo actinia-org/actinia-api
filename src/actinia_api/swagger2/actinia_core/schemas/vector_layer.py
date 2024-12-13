@@ -169,8 +169,8 @@ class VectorInfoResponseModel(ProcessingResponseModel):
         "api_info": {
             "endpoint": "vectorlayerresource",
             "method": "GET",
-            "path": "/locations/nc_spm_08/mapsets/PERMANENT/vector_layers/geology",
-            "request_url": "http://localhost:5000/locations/nc_spm_08/mapsets/"
+            "path": "/projects/nc_spm_08/mapsets/PERMANENT/vector_layers/geology",
+            "request_url": "http://localhost:5000/projects/nc_spm_08/mapsets/"
             "PERMANENT/vector_layers/geology",
         },
         "datetime": "2018-05-06 21:36:54.032325",

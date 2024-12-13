@@ -43,12 +43,12 @@ __maintainer__ = "mundialis GmbH & Co. KG"
 get_doc = {
     "tags": ["STRDS Management"],
     "description": "Get a list of all raster map layers that are registered "
-    "in a STRDS that is located in a specific location/mapset. "
+    "in a STRDS that is located in a specific project/mapset. "
     "Minimum required user role: user.",
     "parameters": [
         {
-            "name": "location_name",
-            "description": "The name of the location",
+            "name": "project_name",
+            "description": "The name of the project",
             "required": True,
             "in": "path",
             "type": "string",
@@ -96,12 +96,12 @@ get_doc = {
 put_doc = {
     "tags": ["STRDS Management"],
     "description": "Register raster map layers in a STRDS located in a "
-    "specific location/mapset. "
+    "specific project/mapset. "
     "Minimum required user role: user.",
     "parameters": [
         {
-            "name": "location_name",
-            "description": "The name of the location",
+            "name": "project_name",
+            "description": "The name of the project",
             "required": True,
             "in": "path",
             "type": "string",
@@ -146,12 +146,12 @@ put_doc = {
 delete_doc = {
     "tags": ["STRDS Management"],
     "description": "Unregister raster map layers from a STRDS located in a "
-    "specific location/mapset. "
+    "specific project/mapset. "
     "Minimum required user role: user.",
     "parameters": [
         {
-            "name": "location_name",
-            "description": "The name of the location",
+            "name": "project_name",
+            "description": "The name of the project",
             "required": True,
             "in": "path",
             "type": "string",

@@ -49,7 +49,7 @@ progress and finishing status.
 
     Make sure that the process chain definition identifies all raster, vector
     or space-time datasets correctly with name and mapset: name@mapset if you
-    use data from other mapsets in the specified location.
+    use data from other mapsets in the specified project.
 
     All required mapsets will be identified by analysing the input parameter
     of all module descriptions in the provided process chain and
@@ -71,8 +71,8 @@ post_doc = {
     "consumes": ["application/json"],
     "parameters": [
         {
-            "name": "location_name",
-            "description": "The location name that contains the data that "
+            "name": "project_name",
+            "description": "The project name that contains the data that "
             "should be processed",
             "required": True,
             "in": "path",

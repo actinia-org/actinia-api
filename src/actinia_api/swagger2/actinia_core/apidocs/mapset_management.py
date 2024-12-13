@@ -44,12 +44,12 @@ __maintainer__ = "mundialis GmbH & Co. KG"
 get_doc = {
     "tags": ["Mapset Management"],
     "description": "Get a list of all mapsets that are located in a "
-    "specific location. "
+    "specific project. "
     "Minimum required user role: user.",
     "parameters": [
         {
-            "name": "location_name",
-            "description": "The name of the location",
+            "name": "project_name",
+            "description": "The name of the project",
             "required": True,
             "in": "path",
             "type": "string",
@@ -74,12 +74,12 @@ get_doc = {
 get_user_doc = {
     "tags": ["Mapset Management"],
     "description": "Get the current computational region of the mapset and the"
-    " projection of the location as WKT string. Minimum required "
+    " projection of the project as WKT string. Minimum required "
     "user role: user.",
     "parameters": [
         {
-            "name": "location_name",
-            "description": "The name of the location",
+            "name": "project_name",
+            "description": "The name of the project",
             "required": True,
             "in": "path",
             "type": "string",
@@ -97,7 +97,7 @@ get_user_doc = {
     "responses": {
         "200": {
             "description": "The current computational region of the "
-            "mapset and the projection of the location",
+            "mapset and the projection of the project",
             "schema": MapsetInfoResponseModel,
         },
         "400": {
@@ -109,12 +109,12 @@ get_user_doc = {
 
 post_user_doc = {
     "tags": ["Mapset Management"],
-    "description": "Create a new mapset in an existing location. Minimum "
+    "description": "Create a new mapset in an existing project. Minimum "
     "required user role: user.",
     "parameters": [
         {
-            "name": "location_name",
-            "description": "The name of the location",
+            "name": "project_name",
+            "description": "The name of the project",
             "required": True,
             "in": "path",
             "type": "string",
@@ -145,8 +145,8 @@ delete_user_doc = {
     " user.",
     "parameters": [
         {
-            "name": "location_name",
-            "description": "The name of the location",
+            "name": "project_name",
+            "description": "The name of the project",
             "required": True,
             "in": "path",
             "type": "string",
@@ -173,12 +173,12 @@ delete_user_doc = {
 
 get_lock_doc = {
     "tags": ["Mapset Management"],
-    "description": "Get the location/mapset lock status. "
+    "description": "Get the project/mapset lock status. "
     "Minimum required user role: admin.",
     "parameters": [
         {
-            "name": "location_name",
-            "description": "The name of the location",
+            "name": "project_name",
+            "description": "The name of the project",
             "required": True,
             "in": "path",
             "type": "string",
@@ -195,7 +195,7 @@ get_lock_doc = {
     ],
     "responses": {
         "200": {
-            "description": "Get the location/mapset lock status, either "
+            "description": "Get the project/mapset lock status, either "
             '"True" or "None"',
             "schema": MapsetLockManagementResponseModel,
         },
@@ -208,14 +208,14 @@ get_lock_doc = {
 
 post_lock_doc = {
     "tags": ["Mapset Management"],
-    "description": "Create a location/mapset lock. A location/mapset lock can "
+    "description": "Create a project/mapset lock. A project/mapset lock can "
     "be created so that no operation can be performed on it "
     "until it is unlocked. "
     "Minimum required user role: admin.",
     "parameters": [
         {
-            "name": "location_name",
-            "description": "The name of the location",
+            "name": "project_name",
+            "description": "The name of the project",
             "required": True,
             "in": "path",
             "type": "string",
@@ -232,7 +232,7 @@ post_lock_doc = {
     ],
     "responses": {
         "200": {
-            "description": "Success message if the location/mapset was "
+            "description": "Success message if the project/mapset was "
             "locked successfully",
             "schema": ProcessingResponseModel,
         },
@@ -245,14 +245,14 @@ post_lock_doc = {
 
 delete_lock_doc = {
     "tags": ["Mapset Management"],
-    "description": "Delete a location/mapset lock. A location/mapset lock "
+    "description": "Delete a project/mapset lock. A project/mapset lock "
     "can be deleted so that operation can be performed on "
     "it until it is locked. "
     "Minimum required user role: admin.",
     "parameters": [
         {
-            "name": "location_name",
-            "description": "The name of the location",
+            "name": "project_name",
+            "description": "The name of the project",
             "required": True,
             "in": "path",
             "type": "string",
@@ -269,7 +269,7 @@ delete_lock_doc = {
     ],
     "responses": {
         "200": {
-            "description": "Success message if the location/mapset was "
+            "description": "Success message if the project/mapset was "
             "unlocked successfully",
             "schema": ProcessingResponseModel,
         },

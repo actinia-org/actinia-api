@@ -46,8 +46,8 @@ get_doc = {
     "Minimum required user role: user.",
     "parameters": [
         {
-            "name": "location_name",
-            "description": "The location name",
+            "name": "project_name",
+            "description": "The project name",
             "required": True,
             "in": "path",
             "type": "string",
@@ -94,8 +94,8 @@ delete_doc = {
     "user role: user.",
     "parameters": [
         {
-            "name": "location_name",
-            "description": "The location name",
+            "name": "project_name",
+            "description": "The project name",
             "required": True,
             "in": "path",
             "type": "string",
@@ -139,12 +139,12 @@ post_doc = {
     '-H "Content-Type: multipart/form-data" -F '
     '"file=@/home/....tif" http://localhost:8088'
     f"{URL_PREFIX}/"
-    "locations/nc_spm_08/mapsets/test_mapset/raster_layers/"
+    "projects/nc_spm_08/mapsets/test_mapset/raster_layers/"
     "testraster'. Minimum required user role: user.",
     "parameters": [
         {
-            "name": "location_name",
-            "description": "The location name",
+            "name": "project_name",
+            "description": "The project name",
             "required": True,
             "in": "path",
             "type": "string",
