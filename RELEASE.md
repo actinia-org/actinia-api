@@ -25,3 +25,7 @@ Steps when releasing actinia-api:
 
 ## 3. Release
 * Now you can save the release
+
+## 4. Update actinia-api version in other repos
+* [actinia-core dependencies](https://github.com/actinia-org/actinia-core/blob/main/pyproject.toml#L38)
+* `ACTINIA_API_VERSION` in [actinia-docker](https://github.com/actinia-org/actinia-docker/blob/main/actinia-alpine/Dockerfile#L98)
