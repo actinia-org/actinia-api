@@ -22,7 +22,7 @@
 #######
 
 """
-API docs for location_management
+API docs for project_management
 """
 
 from actinia_core.models.response_models import (
@@ -43,13 +43,13 @@ __copyright__ = "Copyright 2016-2022, mundialis GmbH & Co. KG"
 __maintainer__ = "mundialis GmbH & Co. KG"
 
 get_doc = {
-    "tags": ["Location Management"],
-    "description": "Get a list of all available locations that are located in "
+    "tags": ["Project Management"],
+    "description": "Get a list of all available projects that are located in "
     "the GRASS database and the user has access to. Minimum required "
     "user role: user.",
     "responses": {
         "200": {
-            "description": "This response returns a list of location names",
+            "description": "This response returns a list of project names",
             "schema": LocationListResponseModel,
         },
         "400": {
@@ -60,14 +60,14 @@ get_doc = {
 }
 
 get_user_doc = {
-    "tags": ["Location Management"],
-    "description": "Get the location projection and current computational "
+    "tags": ["Project Management"],
+    "description": "Get the project projection and current computational "
     "region of the PERMANENT mapset. Minimum required user "
     "role: user.",
     "parameters": [
         {
-            "name": "location_name",
-            "description": "The name of the location",
+            "name": "project_name",
+            "description": "The name of the project",
             "required": True,
             "in": "path",
             "type": "string",
@@ -76,7 +76,7 @@ get_user_doc = {
     ],
     "responses": {
         "200": {
-            "description": "The location projection and current computational "
+            "description": "The project projection and current computational "
             "region of the PERMANENT mapset",
             "schema": MapsetInfoResponseModel,
         },
@@ -88,13 +88,13 @@ get_user_doc = {
 }
 
 delete_user_doc = {
-    "tags": ["Location Management"],
-    "description": "Delete an existing location and everything inside from the"
+    "tags": ["Project Management"],
+    "description": "Delete an existing project and everything inside from the"
     " user database. Minimum required user role: user.",
     "parameters": [
         {
-            "name": "location_name",
-            "description": "The name of the location to be deleted",
+            "name": "project_name",
+            "description": "The name of the project to be deleted",
             "required": True,
             "in": "path",
             "type": "string",
@@ -102,7 +102,7 @@ delete_user_doc = {
     ],
     "responses": {
         "200": {
-            "description": "Success message for location deletion",
+            "description": "Success message for project deletion",
             "schema": SimpleResponseModel,
         },
         "400": {
@@ -113,14 +113,14 @@ delete_user_doc = {
 }
 
 post_user_doc = {
-    "tags": ["Location Management"],
-    "description": "Create a new location based on EPSG code in the user "
+    "tags": ["Project Management"],
+    "description": "Create a new project based on EPSG code in the user "
     "database. Minimum required user role: user.",
     "consumes": ["application/json"],
     "parameters": [
         {
-            "name": "location_name",
-            "description": "The name of the location to be created",
+            "name": "project_name",
+            "description": "The name of the project to be created",
             "required": True,
             "in": "path",
             "type": "string",
@@ -135,7 +135,7 @@ post_user_doc = {
     ],
     "responses": {
         "200": {
-            "description": "Create a new location based on EPSG code",
+            "description": "Create a new project based on EPSG code",
             "schema": ProcessingResponseModel,
         },
         "400": {

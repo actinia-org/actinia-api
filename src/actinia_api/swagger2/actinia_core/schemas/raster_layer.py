@@ -76,7 +76,7 @@ class RasterInfoModel(Schema):
         "cells": "2025000",
         "cols": "1500",
         "comments": '"r.proj input="ned03arcsec" '
-        'location="northcarolina_latlong" mapset="\\helena" '
+        'project="northcarolina_latlong" mapset="\\helena" '
         'output="elev_ned10m" method="cubic" resolution=10"',
         "creator": '"helena"',
         "database": "/tmp/gisdbase_75bc0828",
@@ -120,8 +120,8 @@ class RasterInfoResponseModel(ProcessingResponseModel):
         "api_info": {
             "endpoint": "rasterlayerresource",
             "method": "GET",
-            "path": "/locations/nc_spm_08/mapsets/PERMANENT/raster_layers/elevation",
-            "request_url": "http://localhost:8080/locations/nc_spm_08/mapsets/"
+            "path": "/projects/nc_spm_08/mapsets/PERMANENT/raster_layers/elevation",
+            "request_url": "http://localhost:8080/projects/nc_spm_08/mapsets/"
             "PERMANENT/raster_layers/elevation",
         },
         "datetime": "2018-05-02 10:44:11.897704",
@@ -150,7 +150,7 @@ class RasterInfoResponseModel(ProcessingResponseModel):
             "cells": "2025000",
             "cols": "1500",
             "comments": '"r.proj input="ned03arcsec" '
-            'location="northcarolina_latlong" mapset="\\helena" '
+            'project="northcarolina_latlong" mapset="\\helena" '
             'output="elev_ned10m" method="cubic" resolution=10"',
             "creator": '"helena"',
             "database": "/actinia/workspace/temp_db/"

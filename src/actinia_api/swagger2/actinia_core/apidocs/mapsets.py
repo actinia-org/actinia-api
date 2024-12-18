@@ -52,7 +52,7 @@ get_doc = {
             "type": "string",
             "description": (
                 "If set to 'locked', list all locked mapsets across "
-                "all locations. Minimum required user role: admin."
+                "all projects. Minimum required user role: admin."
             ),
         },
         {

@@ -44,11 +44,11 @@ __maintainer__ = "mundialis GmbH & Co. KG"
 list_get_doc = {
     "tags": ["STRDS Management"],
     "description": "Get a list of all STRDS that are located in a specific "
-    "location/mapset. Minimum required user role: user.",
+    "project/mapset. Minimum required user role: user.",
     "parameters": [
         {
-            "name": "location_name",
-            "description": "The name of the location",
+            "name": "project_name",
+            "description": "The name of the project",
             "required": True,
             "in": "path",
             "type": "string",
@@ -86,12 +86,12 @@ list_get_doc = {
 get_doc = {
     "tags": ["STRDS Management"],
     "description": "Get information about a STRDS that is located in a "
-    "specific location/mapset. "
+    "specific project/mapset. "
     "Minimum required user role: user.",
     "parameters": [
         {
-            "name": "location_name",
-            "description": "The name of the location",
+            "name": "project_name",
+            "description": "The name of the project",
             "required": True,
             "in": "path",
             "type": "string",
@@ -128,12 +128,12 @@ get_doc = {
 
 delete_doc = {
     "tags": ["STRDS Management"],
-    "description": "Delete a STRDS that is located in a specific location/"
+    "description": "Delete a STRDS that is located in a specific project/"
     "mapset. Minimum required user role: user.",
     "parameters": [
         {
-            "name": "location_name",
-            "description": "The name of the location",
+            "name": "project_name",
+            "description": "The name of the project",
             "required": True,
             "in": "path",
             "type": "string",
@@ -176,12 +176,12 @@ delete_doc = {
 
 post_doc = {
     "tags": ["STRDS Management"],
-    "description": "Create a new STRDS in a specific location/mapset. "
+    "description": "Create a new STRDS in a specific project/mapset. "
     "Minimum required user role: user.",
     "parameters": [
         {
-            "name": "location_name",
-            "description": "The name of the location",
+            "name": "project_name",
+            "description": "The name of the project",
             "required": True,
             "in": "path",
             "type": "string",

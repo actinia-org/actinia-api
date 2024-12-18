@@ -22,7 +22,7 @@
 #######
 
 """
-Models for location_management
+Models for project_management
 """
 
 from flask_restful_swagger_2 import Schema
@@ -52,7 +52,7 @@ class LocationListResponseModel(Schema):
         "locations": {
             "type": "array",
             "items": {"type": "string"},
-            "description": "The list of locations in the GRASS database",
+            "description": "The list of projects in the GRASS database",
         },
         "projects": {
             "type": "array",
@@ -81,7 +81,7 @@ class ProjectionInfoModel(Schema):
         "epsg": {
             "type": "string",
             "description": "The EPSG code of the projection that should be used "
-            "to create a location",
+            "to create a project",
         }
     }
     example = {"epsg": "4326"}

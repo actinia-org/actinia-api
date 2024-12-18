@@ -38,12 +38,12 @@ __maintainer__ = "mundialis GmbH & Co. KG"
 raster_get_doc = {
     "tags": ["Raster Management"],
     "description": "Get a list of raster map layer names that are located "
-    "in a specific location/mapset."
+    "in a specific project/mapset."
     " Minimum required user role: user.",
     "parameters": [
         {
-            "name": "location_name",
-            "description": "The name of the location that should be accessed",
+            "name": "project_name",
+            "description": "The name of the project that should be accessed",
             "required": True,
             "in": "path",
             "type": "string",
@@ -85,12 +85,12 @@ raster_get_doc = {
 raster_put_doc = {
     "tags": ["Raster Management"],
     "description": "Rename a single raster map layer or a list of raster "
-    "map layers that are located in a specific location/mapset. "
+    "map layers that are located in a specific project/mapset. "
     "Minimum required user role: user.",
     "parameters": [
         {
-            "name": "location_name",
-            "description": "The name of the location that should be accessed",
+            "name": "project_name",
+            "description": "The name of the project that should be accessed",
             "required": True,
             "in": "path",
             "type": "string",
@@ -130,11 +130,11 @@ raster_delete_doc = {
     "tags": ["Raster Management"],
     "description": "Delete a single raster map layer or a list of raster "
     "map layer names that are located in a specific "
-    "location/mapset. Minimum required user role: user.",
+    "project/mapset. Minimum required user role: user.",
     "parameters": [
         {
-            "name": "location_name",
-            "description": "The name of the location that should be accessed",
+            "name": "project_name",
+            "description": "The name of the project that should be accessed",
             "required": True,
             "in": "path",
             "type": "string",
@@ -174,12 +174,12 @@ raster_delete_doc = {
 vector_get_doc = {
     "tags": ["Vector Management"],
     "description": "Get a list of vector map layer names that are located "
-    "in a specific location/mapset."
+    "in a specific project/mapset."
     " Minimum required user role: user.",
     "parameters": [
         {
-            "name": "location_name",
-            "description": "The name of the location that should be accessed",
+            "name": "project_name",
+            "description": "The name of the project that should be accessed",
             "required": True,
             "in": "path",
             "type": "string",
@@ -222,11 +222,11 @@ vector_put_doc = {
     "tags": ["Vector Management"],
     "description": "Rename a single vector map layer or a list of vector "
     "map layers that are located in a specific "
-    "location/mapset. Minimum required user role: user.",
+    "project/mapset. Minimum required user role: user.",
     "parameters": [
         {
-            "name": "location_name",
-            "description": "The name of the location that should be accessed",
+            "name": "project_name",
+            "description": "The name of the project that should be accessed",
             "required": True,
             "in": "path",
             "type": "string",
@@ -266,11 +266,11 @@ vector_delete_doc = {
     "tags": ["Vector Management"],
     "description": "Delete a single vector map layer or a list of vector "
     "map layer names that are located in a specific "
-    "location/mapset. Minimum required user role: user.",
+    "project/mapset. Minimum required user role: user.",
     "parameters": [
         {
-            "name": "location_name",
-            "description": "The name of the location that should be accessed",
+            "name": "project_name",
+            "description": "The name of the project that should be accessed",
             "required": True,
             "in": "path",
             "type": "string",

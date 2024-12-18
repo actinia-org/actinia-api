@@ -90,9 +90,9 @@ class STRDSRasterListResponseModel(ProcessingResponseModel):
         "api_info": {
             "endpoint": "strdsrastermanagement",
             "method": "GET",
-            "path": "/locations/ECAD/mapsets/PERMANENT/strds/"
+            "path": "/projects/ECAD/mapsets/PERMANENT/strds/"
             "precipitation_1950_2013_yearly_mm/raster_layers",
-            "request_url": "http://localhost:5000/locations/ECAD/mapsets/"
+            "request_url": "http://localhost:5000/projects/ECAD/mapsets/"
             "PERMANENT/strds/precipitation_1950_2013_yearly_mm/"
             "raster_layers?where=start_time>'2010-01-01'",
         },

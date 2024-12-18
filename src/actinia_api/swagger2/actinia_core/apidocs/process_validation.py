@@ -47,8 +47,8 @@ post_doc = {
     "consumes": ["application/json"],
     "parameters": [
         {
-            "name": "location_name",
-            "description": "The location name that contains the data that "
+            "name": "project_name",
+            "description": "The project name that contains the data that "
             "should be used in the process chain",
             "required": True,
             "in": "path",

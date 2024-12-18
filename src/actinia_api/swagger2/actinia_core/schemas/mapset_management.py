@@ -49,8 +49,8 @@ class MapsetLockManagementResponseModel(ProcessingResponseModel):
         "api_info": {
             "endpoint": "mapsetlockmanagementresource",
             "method": "GET",
-            "path": "/locations/nc_spm_08/mapsets/PERMANENT/lock",
-            "request_url": "http://localhost:8080/locations/nc_spm_08/mapsets/"
+            "path": "/projects/nc_spm_08/mapsets/PERMANENT/lock",
+            "request_url": "http://localhost:8080/projects/nc_spm_08/mapsets/"
             "PERMANENT/lock",
         },
         "datetime": "2018-05-02 11:03:26.586348",

@@ -42,8 +42,8 @@ get_doc = {
     "Minimum required user role: user.",
     "parameters": [
         {
-            "name": "location_name",
-            "description": "The location name",
+            "name": "project_name",
+            "description": "The project name",
             "required": True,
             "in": "path",
             "type": "string",
