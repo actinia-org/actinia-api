@@ -30,10 +30,10 @@ from actinia_core.models.response_models import (
     ProcessingResponseModel,
     SimpleResponseModel,
 )
-from actinia_api.swagger2.actinia_core.schemas.location_management import (
-    LocationListResponseModel,
+from actinia_api.swagger2.actinia_core.schemas.project_management import (
+    ProjectListResponseModel,
 )
-from actinia_api.swagger2.actinia_core.schemas.location_management import (
+from actinia_api.swagger2.actinia_core.schemas.project_management import (
     ProjectionInfoModel,
 )
 
@@ -50,7 +50,7 @@ get_doc = {
     "responses": {
         "200": {
             "description": "This response returns a list of project names",
-            "schema": LocationListResponseModel,
+            "schema": ProjectListResponseModel,
         },
         "400": {
             "description": "The error message",
