@@ -4,7 +4,7 @@
 # performance processing of geographical data that uses GRASS GIS for
 # computational tasks. For details, see https://actinia.mundialis.de/
 #
-# Copyright (c) 2016-2024 Sören Gebbert and mundialis GmbH & Co. KG
+# Copyright (c) 2016-2025 Sören Gebbert and mundialis GmbH & Co. KG
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -30,7 +30,7 @@ from flask_restful_swagger_2 import Schema
 __license__ = "GPLv3"
 __author__ = "Sören Gebbert, Carmen Tawalika, Anika Weinmann"
 __copyright__ = (
-    "Copyright 2016-2024, Sören Gebbert and mundialis GmbH & Co. KG"
+    "Copyright 2016-2025, Sören Gebbert and mundialis GmbH & Co. KG"
 )
 __maintainer__ = "mundialis GmbH & Co. KG"
 
@@ -39,7 +39,7 @@ from actinia_core.version import init_versions, G_VERSION
 init_versions()
 
 
-class LocationListResponseModel(Schema):
+class ProjectListResponseModel(Schema):
     """Response schema for projects lists"""
 
     type = "object"

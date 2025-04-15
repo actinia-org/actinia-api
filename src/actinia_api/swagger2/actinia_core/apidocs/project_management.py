@@ -4,7 +4,7 @@
 # performance processing of geographical data that uses GRASS GIS for
 # computational tasks. For details, see https://actinia.mundialis.de/
 #
-# Copyright (c) 2016-2022 Sören Gebbert and mundialis GmbH & Co. KG
+# Copyright (c) 2016-2025 Sören Gebbert and mundialis GmbH & Co. KG
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -30,16 +30,16 @@ from actinia_core.models.response_models import (
     ProcessingResponseModel,
     SimpleResponseModel,
 )
-from actinia_api.swagger2.actinia_core.schemas.location_management import (
-    LocationListResponseModel,
+from actinia_api.swagger2.actinia_core.schemas.project_management import (
+    ProjectListResponseModel,
 )
-from actinia_api.swagger2.actinia_core.schemas.location_management import (
+from actinia_api.swagger2.actinia_core.schemas.project_management import (
     ProjectionInfoModel,
 )
 
 __license__ = "GPLv3"
 __author__ = "Sören Gebbert, Carmen Tawalika, Anika Weinmann"
-__copyright__ = "Copyright 2016-2022, mundialis GmbH & Co. KG"
+__copyright__ = "Copyright 2016-2025, mundialis GmbH & Co. KG"
 __maintainer__ = "mundialis GmbH & Co. KG"
 
 get_doc = {
@@ -50,7 +50,7 @@ get_doc = {
     "responses": {
         "200": {
             "description": "This response returns a list of project names",
-            "schema": LocationListResponseModel,
+            "schema": ProjectListResponseModel,
         },
         "400": {
             "description": "The error message",
