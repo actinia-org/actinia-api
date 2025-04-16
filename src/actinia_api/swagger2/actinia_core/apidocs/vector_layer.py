@@ -43,8 +43,17 @@ __maintainer__ = "mundialis GmbH & Co. KG"
 
 get_doc = {
     "tags": ["Vector Management"],
-    "description": "Get information about an existing vector map layer. "
+    "description": "Get information about an existing vector map layer."
+    "In case the vector has no database connection, general information about "
+    "the vector is given: region, topology, extended metadata and history."
+    "In case the vector has a database connection "
+    "further informations are given."
+    "A vector with a single layer, returns additionally the types/names "
+    "of tables columns for the default layer (layer 1)"
+    "A vector with multiple layers, returns additionally all map connection "
+    "parameters."
     "Minimum required user role: user.",
+    # TODO: update example (only for 200-response case); more output with fix
     "parameters": [
         {
             "name": "project_name",
