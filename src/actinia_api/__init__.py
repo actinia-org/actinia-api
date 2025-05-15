@@ -1,3 +1,12 @@
+"""
+actinia-api
+=========
+actinia-api is a RESTful API for the actinia framework. It provides a
+web service interface to the actinia framework, which is a geospatial
+processing framework based on the GRASS GIS software. The API allows
+users to access and manipulate geospatial data, run processing tasks,
+and manage the underlying GRASS GIS environment.
+"""
 import importlib.metadata
 
 API_VERSION = "v3"

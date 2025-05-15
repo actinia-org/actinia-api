@@ -1,0 +1,6 @@
+[flake8]
+
+exclude = .git,.pycache,build,.eggs
+
+# Allow longer lines due to so many JSON files
+max-line-length = 88

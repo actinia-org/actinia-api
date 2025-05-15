@@ -196,6 +196,8 @@ class STRDSRasterListResponseModel(ProcessingResponseModel):
 
 
 class RasterListEntryModel(Schema):
+    """Schema for items for RasterListRegisterModel."""
+
     type = "object"
     properties = {
         "name": {"type": "string"},
@@ -205,6 +207,8 @@ class RasterListEntryModel(Schema):
 
 
 class RasterListRegisterModel(Schema):
+    """Schema for the list of raster map layers to be registered."""
+
     type = "array"
     items = RasterListEntryModel
     example = [

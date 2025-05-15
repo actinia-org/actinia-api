@@ -1,0 +1,23 @@
+# Extends https://github.com/mundialis/github-workflows/blob/main/linting-config-examples/ruff.toml
+
+lint.ignore = [
+    "BLE001",
+    "COM812",
+    "D200",
+    "D205",
+    "D212",
+    "D400",
+    "D404",
+    "D415",
+    "E501",
+    "I001",
+    "ISC001",
+    "RUF012",
+    "S108",
+    "S311",
+    "UP009",
+    "UP031",
+]
+
+# [lint.per-file-ignores]
+# "src/actinia_grassdata_management_plugin/apidocs/__init__.py" = [ "E501",]
