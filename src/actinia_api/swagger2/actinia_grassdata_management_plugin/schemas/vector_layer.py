@@ -22,7 +22,7 @@
 #######
 
 """Vector layer resources."""
-import random
+import secrets
 from copy import deepcopy
 
 from actinia_core.models.response_models import ProcessingResponseModel
@@ -312,7 +312,7 @@ class VectorCreationModel(Schema):
             "format": "integer",
             "description": "The seed to initialize the random generator. "
             "If not set the process ID is used",
-            "default": random.randint(0, 1000000),
+            "default": secrets.randbelow(1000000),
         },
         "zmin": {
             "type": "number",
