@@ -9,3 +9,6 @@ lint.ignore = [
 
 # [lint.per-file-ignores]
 # "src/actinia_grassdata_management_plugin/apidocs/__init__.py" = [ "E501",]
+
+# Online ignores of
+# S108 Probable insecure usage of temporary file or directory
