@@ -24,8 +24,8 @@
 """API docs for download_cache_management."""
 
 from actinia_core.models.response_models import (
-    StorageResponseModel,
     ProcessingResponseModel,
+    StorageResponseModel,
 )
 
 __license__ = "GPLv3"

@@ -30,7 +30,6 @@ from actinia_api.swagger2.actinia_core.schemas.process_chain_monitoring import (
     MaxMapsetSizeResponseModel,
 )
 
-
 __license__ = "GPLv3"
 __author__ = "Anika Weinmann, Carmen Tawalika"
 __copyright__ = "Copyright 2021-2022, mundialis GmbH & Co. KG"

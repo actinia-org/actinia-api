@@ -25,8 +25,8 @@
 
 from actinia_core.models.response_models import (
     MapsetInfoResponseModel,
-    ProcessingResponseModel,
     ProcessingErrorResponseModel,
+    ProcessingResponseModel,
     StringListProcessingResultResponseModel,
 )
 

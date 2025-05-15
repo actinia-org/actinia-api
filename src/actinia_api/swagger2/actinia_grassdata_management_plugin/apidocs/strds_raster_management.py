@@ -29,8 +29,8 @@ from actinia_core.models.response_models import (
 )
 
 from actinia_api.swagger2.actinia_core.schemas.strds_raster_management import (
-    STRDSRasterListResponseModel,
     RasterListRegisterModel,
+    STRDSRasterListResponseModel,
 )
 
 __license__ = "GPLv3"

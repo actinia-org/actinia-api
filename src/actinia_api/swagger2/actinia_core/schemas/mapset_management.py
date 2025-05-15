@@ -23,6 +23,7 @@
 
 """Model for Mapset management resources."""
 from copy import deepcopy
+
 from actinia_core.models.response_models import ProcessingResponseModel
 
 __license__ = "GPLv3"

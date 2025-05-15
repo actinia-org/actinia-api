@@ -4,9 +4,7 @@ lint.ignore = [
     "BLE001",
     "COM812",
     "D205",
-    "D415",
-    "E501",
-    "I001",
+    "E501",  # ignore here, flake checks with 88 lines
     "ISC001",
     "RUF012",
     "S108",

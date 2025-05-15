@@ -24,8 +24,8 @@
 """API docs for raster_export."""
 
 from actinia_core.models.response_models import (
-    ProcessingResponseModel,
     ProcessingErrorResponseModel,
+    ProcessingResponseModel,
 )
 
 __license__ = "GPLv3"

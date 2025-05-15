@@ -26,8 +26,9 @@
 TODO: Integrate into the ephemeral process chain approach
 """
 from copy import deepcopy
-from flask_restful_swagger_2 import Schema
+
 from actinia_core.models.response_models import ProcessingResponseModel
+from flask_restful_swagger_2 import Schema
 
 __license__ = "GPLv3"
 __author__ = "Sören Gebbert, Carmen Tawalika"

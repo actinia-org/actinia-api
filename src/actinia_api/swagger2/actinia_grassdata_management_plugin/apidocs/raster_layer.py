@@ -24,8 +24,8 @@
 """API docs for raster_layer."""
 
 from actinia_core.models.response_models import (
-    ProcessingResponseModel,
     ProcessingErrorResponseModel,
+    ProcessingResponseModel,
 )
 
 from actinia_api import URL_PREFIX

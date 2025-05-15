@@ -24,9 +24,9 @@
 """API docs for user_management."""
 
 from actinia_core.models.response_models import (
+    SimpleResponseModel,
     UserInfoResponseModel,
     UserListResponseModel,
-    SimpleResponseModel,
 )
 
 __license__ = "GPLv3"

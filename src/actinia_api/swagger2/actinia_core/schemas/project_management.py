@@ -32,7 +32,7 @@ __copyright__ = (
 )
 __maintainer__ = "mundialis GmbH & Co. KG"
 
-from actinia_core.version import init_versions, G_VERSION
+from actinia_core.version import G_VERSION, init_versions
 
 init_versions()
 
