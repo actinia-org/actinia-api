@@ -21,9 +21,7 @@
 #
 #######
 
-"""
-API docs for map_layer_management
-"""
+"""API docs for map_layer_management"""
 
 from actinia_core.models.response_models import (
     ProcessingResponseModel,

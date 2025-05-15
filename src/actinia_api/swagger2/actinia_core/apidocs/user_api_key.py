@@ -21,9 +21,7 @@
 #
 #######
 
-"""
-API docs for user_api_key
-"""
+"""API docs for user_api_key"""
 
 from actinia_api.swagger2.actinia_core.schemas.user_api_key import (
     TokenResponseModel,

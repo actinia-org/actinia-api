@@ -21,9 +21,7 @@
 #
 #######
 
-"""
-API docs for strds_renderer
-"""
+"""API docs for strds_renderer"""
 
 from actinia_core.models.response_models import (
     ProcessingErrorResponseModel,

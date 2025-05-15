@@ -21,9 +21,7 @@
 #
 #######
 
-"""
-API docs for resource_storage_management
-"""
+"""API docs for resource_storage_management"""
 
 from actinia_core.models.response_models import (
     ProcessingErrorResponseModel,

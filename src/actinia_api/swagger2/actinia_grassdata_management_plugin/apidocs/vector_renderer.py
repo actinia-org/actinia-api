@@ -21,9 +21,7 @@
 #
 #######
 
-"""
-API docs for vector_renderer
-"""
+"""API docs for vector_renderer"""
 
 from actinia_core.models.response_models import (
     ProcessingErrorResponseModel,

@@ -21,9 +21,7 @@
 #
 #######
 
-"""
-API docs for api_log_management
-"""
+"""API docs for api_log_management"""
 
 from actinia_api.swagger2.actinia_core.schemas.api_log_management import (
     ApiLogListModel,

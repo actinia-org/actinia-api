@@ -21,9 +21,7 @@
 #
 #######
 
-"""
-Models for project_management
-"""
+"""Models for project_management"""
 
 from flask_restful_swagger_2 import Schema
 

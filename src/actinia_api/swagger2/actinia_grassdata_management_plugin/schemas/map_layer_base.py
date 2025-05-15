@@ -21,9 +21,7 @@
 #
 #######
 
-"""
-Model for Base layer resources
-"""
+"""Model for Base layer resources"""
 
 from flask_restful_swagger_2 import Schema
 

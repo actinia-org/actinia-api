@@ -21,9 +21,7 @@
 #
 #######
 
-"""
-Models for api_log_management
-"""
+"""Models for api_log_management"""
 
 from flask_restful_swagger_2 import Schema
 

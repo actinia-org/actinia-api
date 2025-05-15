@@ -21,9 +21,7 @@
 #
 #######
 
-"""
-Models for Raster colors management
-"""
+"""Models for Raster colors management"""
 
 from flask_restful_swagger_2 import Schema
 

@@ -21,9 +21,7 @@
 #
 #######
 
-"""
-API docs for user_management
-"""
+"""API docs for user_management"""
 
 from actinia_core.models.response_models import (
     UserInfoResponseModel,

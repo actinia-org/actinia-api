@@ -21,9 +21,7 @@
 #
 #######
 
-"""
-API docs for vector_layer
-"""
+"""API docs for vector_layer"""
 
 from actinia_core.models.response_models import (
     ProcessingErrorResponseModel,

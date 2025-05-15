@@ -21,9 +21,7 @@
 #
 #######
 
-"""
-API docs for raster_renderer
-"""
+"""API docs for raster_renderer"""
 
 from actinia_core.models.response_models import (
     ProcessingErrorResponseModel,

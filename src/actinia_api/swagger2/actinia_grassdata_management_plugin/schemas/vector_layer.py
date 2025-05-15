@@ -21,9 +21,7 @@
 #
 #######
 
-"""
-Vector layer resources
-"""
+"""Vector layer resources"""
 import random
 from copy import deepcopy
 from flask_restful_swagger_2 import Schema

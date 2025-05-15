@@ -21,9 +21,7 @@
 #
 #######
 
-"""
-Process Chain Monitoring
-"""
+"""Process Chain Monitoring"""
 from flask_restful_swagger_2 import Schema
 
 __license__ = "GPLv3"
