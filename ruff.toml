@@ -1,8 +1,7 @@
 # Extends https://github.com/mundialis/github-workflows/blob/main/linting-config-examples/ruff.toml
 
 lint.ignore = [
-    "BLE001",
-    "COM812",
+    "BLE001",  # BLE001 Do not catch blind exception: `Exception
     "D205",
     "E501",  # ignore here, flake checks with 88 lines
     "RUF012",

@@ -131,8 +131,8 @@ class RasterInfoResponseModel(ProcessingResponseModel):
                     "flags": "gre",
                     "inputs": {"map": "elevation@PERMANENT"},
                     "module": "r.info",
-                }
-            }
+                },
+            },
         ],
         "process_log": [
             {
@@ -142,7 +142,7 @@ class RasterInfoResponseModel(ProcessingResponseModel):
                 "run_time": 0.050168514251708984,
                 "stderr": [""],
                 "stdout": "...",
-            }
+            },
         ],
         "process_results": {
             "cells": "2025000",

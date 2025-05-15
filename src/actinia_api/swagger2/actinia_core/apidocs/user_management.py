@@ -41,7 +41,7 @@ user_list_get_doc = {
         "200": {
             "description": "This response returns a list of user names.",
             "schema": UserListResponseModel,
-        }
+        },
     },
 }
 
@@ -57,7 +57,7 @@ user_get_doc = {
             "required": True,
             "in": "path",
             "type": "string",
-        }
+        },
     ],
     "responses": {
         "200": {
@@ -122,7 +122,7 @@ user_delete_doc = {
             "required": True,
             "in": "path",
             "type": "string",
-        }
+        },
     ],
     "responses": {
         "200": {

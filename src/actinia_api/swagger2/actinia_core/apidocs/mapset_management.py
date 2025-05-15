@@ -51,7 +51,7 @@ get_doc = {
             "in": "path",
             "type": "string",
             "default": "nc_spm_08",
-        }
+        },
     ],
     "responses": {
         "200": {

@@ -63,7 +63,7 @@ token_get_doc = {
             "in": "query",
             "type": "integer",
             "default": 86400,
-        }
+        },
     ],
     "responses": {
         "200": {

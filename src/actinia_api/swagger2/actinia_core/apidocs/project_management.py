@@ -68,7 +68,7 @@ get_user_doc = {
             "in": "path",
             "type": "string",
             "default": "nc_spm_08",
-        }
+        },
     ],
     "responses": {
         "200": {
@@ -94,7 +94,7 @@ delete_user_doc = {
             "required": True,
             "in": "path",
             "type": "string",
-        }
+        },
     ],
     "responses": {
         "200": {

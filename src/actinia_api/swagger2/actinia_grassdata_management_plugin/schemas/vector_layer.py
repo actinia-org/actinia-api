@@ -192,7 +192,7 @@ class VectorInfoResponseModel(ProcessingResponseModel):
                     "inputs": {"map": "geology@PERMANENT"},
                     "module": "v.info",
                 },
-            }
+            },
         ],
         "process_log": [
             {

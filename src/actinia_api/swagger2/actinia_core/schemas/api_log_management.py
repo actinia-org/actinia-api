@@ -82,6 +82,6 @@ class ApiLogListModel(Schema):
             "type": "array",
             "items": ApiLogEntryModel,
             "description": "A list of ApiLogEntryModel objects",
-        }
+        },
     }
     required = ["api_log_list"]

@@ -144,8 +144,8 @@ class STRDSInfoResponseModel(ProcessingResponseModel):
                         "type": "strds",
                     },
                     "module": "t.info",
-                }
-            }
+                },
+            },
         ],
         "process_log": [
             {
@@ -159,7 +159,7 @@ class STRDSInfoResponseModel(ProcessingResponseModel):
                 "run_time": 0.4944636821746826,
                 "stderr": [""],
                 "stdout": "...",
-            }
+            },
         ],
         "process_results": {
             "aggregation_type": "None",

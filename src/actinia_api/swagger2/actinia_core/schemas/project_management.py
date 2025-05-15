@@ -79,7 +79,7 @@ class ProjectionInfoModel(Schema):
             "type": "string",
             "description": "The EPSG code of the projection that should be used "
             "to create a project",
-        }
+        },
     }
     example = {"epsg": "4326"}
     required = ["epsg"]

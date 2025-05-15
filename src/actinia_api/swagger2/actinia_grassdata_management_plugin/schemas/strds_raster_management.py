@@ -114,11 +114,11 @@ class STRDSRasterListResponseModel(ProcessingResponseModel):
                         "output": {
                             "name": "/home/soeren/actinia/workspace/temp_db/"
                             "gisdbase_1b72938d2ef54c199f6627b8720f21e1/"
-                            ".tmp/tmptps71vn7"
-                        }
+                            ".tmp/tmptps71vn7",
+                        },
                     },
-                }
-            }
+                },
+            },
         ],
         "process_log": [
             {
@@ -137,7 +137,7 @@ class STRDSRasterListResponseModel(ProcessingResponseModel):
                 "run_time": 0.5023984909057617,
                 "stderr": [""],
                 "stdout": "",
-            }
+            },
         ],
         "process_results": [
             {
