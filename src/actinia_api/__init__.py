@@ -12,7 +12,7 @@ import importlib.metadata
 API_VERSION = "v3"
 
 # This is the URL prefix that must be used in the tests
-URL_PREFIX = "/api/%s" % API_VERSION
+URL_PREFIX = f"/api/{API_VERSION}"
 
 try:
     # Change here if project is renamed and does not equal the package name
