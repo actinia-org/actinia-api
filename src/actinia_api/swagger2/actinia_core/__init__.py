@@ -1,1 +1,1 @@
-"""This module contains the swagger2 API documentation for actinia-core."""
+"""Module containing swagger2 API documentation for actinia-core."""

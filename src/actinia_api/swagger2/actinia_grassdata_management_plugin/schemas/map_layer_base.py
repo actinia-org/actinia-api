@@ -34,7 +34,7 @@ __maintainer__ = "mundialis"
 
 
 class SetRegionModel(Schema):
-    """This schema represents the computational region definition for raster
+    """Schema representing the computational region definition for raster
     and vector map layers.
 
        n : for north

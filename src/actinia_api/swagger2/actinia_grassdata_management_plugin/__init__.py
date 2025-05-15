@@ -1,3 +1,3 @@
-"""This module contains the swagger2 API documentation for
+"""Module containing swagger2 API documentation for
 actinia-grassdata-management-plugin.
 """
