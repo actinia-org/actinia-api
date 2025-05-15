@@ -21,8 +21,7 @@
 #
 #######
 
-"""
-STRDS raster map layer management
+"""STRDS raster map layer management
 
 TODO: Integrate into the ephemeral process chain approach
 """

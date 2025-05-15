@@ -21,8 +21,7 @@
 #
 #######
 
-"""
-The user specific resources
+"""The user specific resources
 
 This module specifies all endpoints to manage user accounts
 in the kvdb database via REST API calls.

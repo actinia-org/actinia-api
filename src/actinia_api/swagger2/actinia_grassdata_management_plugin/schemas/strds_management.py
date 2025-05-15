@@ -21,8 +21,7 @@
 #
 #######
 
-"""
-STRDS map layer management
+"""STRDS map layer management
 
 TODO: Integrate into the ephemeral process chain approach
 """
