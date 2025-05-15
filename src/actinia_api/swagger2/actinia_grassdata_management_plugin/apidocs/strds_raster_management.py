@@ -27,7 +27,7 @@ from actinia_core.models.response_models import (
     ProcessingResponseModel,
 )
 
-from actinia_api.swagger2.actinia_core.schemas.strds_raster_management import (
+from actinia_api.swagger2.actinia_grassdata_management_plugin.schemas.strds_raster_management import (  # noqa: E501
     RasterListRegisterModel,
     STRDSRasterListResponseModel,
 )

@@ -28,7 +28,7 @@ from actinia_core.models.response_models import (
     StringListProcessingResultResponseModel,
 )
 
-from actinia_api.swagger2.actinia_core.schemas.raster_colors import (
+from actinia_api.swagger2.actinia_grassdata_management_plugin.schemas.raster_colors import (  # noqa: E501
     RasterColorModel,
 )
 

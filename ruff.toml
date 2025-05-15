@@ -5,6 +5,7 @@ lint.ignore = [
     "D205",  # D205 1 blank line required between summary line and description
     "E501",  # E501 Line too long (ignore here, flake checks with 88 lines)
     "RUF012",  # RUF012 Mutable class attributes should be annotated with `typing.ClassVar`
+    "RUF100",  # RUF100 [*] Unused `noqa` directive (non-enabled: `E501`) - needed for flake8
 ]
 
 # [lint.per-file-ignores]

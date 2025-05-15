@@ -28,7 +28,7 @@ from actinia_core.models.response_models import (
     StringListProcessingResultResponseModel,
 )
 
-from actinia_api.swagger2.actinia_core.schemas.strds_management import (
+from actinia_api.swagger2.actinia_grassdata_management_plugin.schemas.strds_management import (  # noqa: E501
     STRDSCreationModel,
     STRDSInfoResponseModel,
 )

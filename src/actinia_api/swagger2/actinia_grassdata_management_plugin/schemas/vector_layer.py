@@ -27,7 +27,7 @@ from copy import deepcopy
 from actinia_core.models.response_models import ProcessingResponseModel
 from flask_restful_swagger_2 import Schema
 
-from actinia_api.swagger2.actinia_core.schemas.map_layer_base import (
+from actinia_api.swagger2.actinia_grassdata_management_plugin.schemas.map_layer_base import (  # noqa: E501
     SetRegionModel,
 )
 

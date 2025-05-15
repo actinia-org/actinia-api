@@ -28,7 +28,7 @@ from actinia_core.models.response_models import (
 )
 
 from actinia_api import URL_PREFIX
-from actinia_api.swagger2.actinia_core.schemas.raster_layer import (
+from actinia_api.swagger2.actinia_grassdata_management_plugin.schemas.raster_layer import (  # noqa: E501
     RasterInfoResponseModel,
 )
 
