@@ -21,7 +21,7 @@
 #
 #######
 
-"""Models for project_management"""
+"""Models for project_management."""
 
 from flask_restful_swagger_2 import Schema
 
@@ -38,7 +38,7 @@ init_versions()
 
 
 class ProjectListResponseModel(Schema):
-    """Response schema for projects lists"""
+    """Response schema for projects lists."""
 
     type = "object"
     properties = {
@@ -72,7 +72,7 @@ class ProjectListResponseModel(Schema):
 
 
 class ProjectionInfoModel(Schema):
-    """Schema to define projection information as JSON input in POST requests"""
+    """Schema to define projection information as JSON input in POST requests."""
 
     type = "object"
     properties = {

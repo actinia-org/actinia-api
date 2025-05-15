@@ -21,7 +21,7 @@
 #
 #######
 
-"""STRDS map layer management
+"""STRDS map layer management.
 
 TODO: Integrate into the ephemeral process chain approach
 """
@@ -38,7 +38,7 @@ __maintainer__ = "mundialis"
 
 
 class STRDSInfoModel(Schema):
-    """Schema that contains space-time raster dataset (STRDS) information"""
+    """Schema that contains space-time raster dataset (STRDS) information."""
 
     description = (
         "Information about a specific space-time raster dataset (STRDS)"
@@ -209,7 +209,7 @@ class STRDSInfoResponseModel(ProcessingResponseModel):
 
 
 class STRDSCreationModel(Schema):
-    """Schema for STRDS creation"""
+    """Schema for STRDS creation."""
 
     description = "Information required to create a new STRDS"
     type = "object"

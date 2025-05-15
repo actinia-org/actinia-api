@@ -21,7 +21,7 @@
 #
 #######
 
-"""Process Chain Monitoring"""
+"""Process Chain Monitoring."""
 from flask_restful_swagger_2 import Schema
 
 __license__ = "GPLv3"
@@ -31,7 +31,7 @@ __maintainer__ = "mundialis"
 
 
 class MapsetSizeResponseModel(Schema):
-    """Response schema for mapset sizes of a resource"""
+    """Response schema for mapset sizes of a resource."""
 
     type = "object"
     properties = {
@@ -50,7 +50,7 @@ class MapsetSizeResponseModel(Schema):
 
 
 class MaxMapsetSizeResponseModel(Schema):
-    """Response schema for maximum mapset size of a resoucre"""
+    """Response schema for maximum mapset size of a resoucre."""
 
     type = "object"
     properties = {

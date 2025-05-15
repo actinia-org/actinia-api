@@ -21,7 +21,7 @@
 #
 #######
 
-"""API docs for process_chain_monitoring"""
+"""API docs for process_chain_monitoring."""
 
 from actinia_core.models.response_models import SimpleResponseModel
 

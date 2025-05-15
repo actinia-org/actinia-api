@@ -21,7 +21,7 @@
 #
 #######
 
-"""API docs for raster_colors"""
+"""API docs for raster_colors."""
 
 from actinia_core.models.response_models import (
     ProcessingResponseModel,

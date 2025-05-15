@@ -21,7 +21,7 @@
 #
 #######
 
-"""API docs for ephemeral_processing_with_export"""
+"""API docs for ephemeral_processing_with_export."""
 
 from actinia_core.models.response_models import (
     ProcessingResponseModel,

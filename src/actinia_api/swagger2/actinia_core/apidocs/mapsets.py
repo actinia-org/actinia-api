@@ -21,7 +21,7 @@
 #
 #######
 
-"""API docs for mapsets"""
+"""API docs for mapsets."""
 
 from actinia_core.models.response_models import (
     LockedMapsetListResponseModel,

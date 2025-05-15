@@ -21,7 +21,7 @@
 #
 #######
 
-"""STRDS raster map layer management
+"""STRDS raster map layer management.
 
 TODO: Integrate into the ephemeral process chain approach
 """
@@ -38,7 +38,7 @@ __maintainer__ = "mundialis"
 
 
 class STRDSRasterListEntryModel(Schema):
-    """Schema that contains list entry
+    """Schema that contains list entry.
 
     columns=id,start_time,end_time,north,south,east,west,min,max,rows,cols
     """

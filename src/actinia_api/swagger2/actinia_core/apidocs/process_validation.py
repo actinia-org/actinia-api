@@ -21,7 +21,7 @@
 #
 #######
 
-"""API docs for process_validation"""
+"""API docs for process_validation."""
 
 from actinia_core.core.common.process_chain import ProcessChainModel
 from actinia_core.models.response_models import (

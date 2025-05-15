@@ -21,7 +21,7 @@
 #
 #######
 
-"""API docs for mapset_management"""
+"""API docs for mapset_management."""
 
 from actinia_core.models.response_models import (
     MapsetInfoResponseModel,

@@ -21,7 +21,7 @@
 #
 #######
 
-"""API docs for raster_layer"""
+"""API docs for raster_layer."""
 
 from actinia_core.models.response_models import (
     ProcessingResponseModel,

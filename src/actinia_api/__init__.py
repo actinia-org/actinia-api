@@ -1,4 +1,4 @@
-"""actinia-api
+"""actinia-api.
 =========
 actinia-api is a RESTful API for the actinia framework. It provides a
 web service interface to the actinia framework, which is a geospatial

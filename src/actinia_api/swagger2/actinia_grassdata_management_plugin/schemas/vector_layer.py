@@ -21,7 +21,7 @@
 #
 #######
 
-"""Vector layer resources"""
+"""Vector layer resources."""
 import random
 from copy import deepcopy
 from flask_restful_swagger_2 import Schema
@@ -39,7 +39,7 @@ __maintainer__ = "mundialis"
 
 
 class VectorAttributeModel(Schema):
-    """Simple model that represent the description of vector attributes"""
+    """Simple model that represent the description of vector attributes."""
 
     description = "Description of a vector map layer attribute"
     type = "object"
@@ -48,7 +48,7 @@ class VectorAttributeModel(Schema):
 
 
 class VectorInfoModel(Schema):
-    """Schema that contains vector map layer information"""
+    """Schema that contains vector map layer information."""
 
     description = "Description of a GRASS GIS vector map layer"
     type = "object"
@@ -295,7 +295,7 @@ class VectorInfoResponseModel(ProcessingResponseModel):
 
 
 class VectorCreationModel(Schema):
-    """Schema for input parameters to generate a random point vector map layer"""
+    """Schema for input parameters to generate a random point vector map layer."""
 
     type = "object"
     properties = {
@@ -328,7 +328,7 @@ class VectorCreationModel(Schema):
 
 
 class VectorRegionCreationModel(Schema):
-    """Schema for random vector generation in a specific region"""
+    """Schema for random vector generation in a specific region."""
 
     type = "object"
     properties = {"region": SetRegionModel, "parameter": VectorCreationModel}

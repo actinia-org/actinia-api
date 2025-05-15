@@ -21,7 +21,7 @@
 #
 #######
 
-"""Model for Mapset management resources"""
+"""Model for Mapset management resources."""
 from copy import deepcopy
 from actinia_core.models.response_models import ProcessingResponseModel
 
@@ -34,7 +34,7 @@ __maintainer__ = "mundialis"
 
 
 class MapsetLockManagementResponseModel(ProcessingResponseModel):
-    """The response content that is returned by the GET request"""
+    """The response content that is returned by the GET request."""
 
     type = "object"
     properties = deepcopy(ProcessingResponseModel.properties)

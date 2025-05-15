@@ -21,7 +21,7 @@
 #
 #######
 
-"""API docs for raster_legend"""
+"""API docs for raster_legend."""
 
 from actinia_core.models.response_models import (
     ProcessingErrorResponseModel,

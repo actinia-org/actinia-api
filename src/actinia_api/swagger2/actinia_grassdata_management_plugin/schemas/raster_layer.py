@@ -21,7 +21,7 @@
 #
 #######
 
-"""Raster layer resources"""
+"""Raster layer resources."""
 from copy import deepcopy
 from flask_restful_swagger_2 import Schema
 from actinia_core.models.response_models import ProcessingResponseModel
@@ -35,7 +35,7 @@ __maintainer__ = "mundialis"
 
 
 class RasterInfoModel(Schema):
-    """Schema that contains raster map layer information"""
+    """Schema that contains raster map layer information."""
 
     type = "object"
     properties = {
