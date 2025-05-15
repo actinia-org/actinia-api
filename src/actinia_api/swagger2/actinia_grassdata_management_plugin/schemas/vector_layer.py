@@ -114,7 +114,7 @@ class VectorInfoModel(Schema):
         "centroids": "0",
         "comment": "",
         "creator": "soeren",
-        "database": "/tmp/gisdbase_b83bebdb543440c7b9991e2e5602ba91",
+        "database": "/tmp/gisdbase_b83bebdb543440c7b9991e2e5602ba91",  # noqa: S108
         "digitization_threshold": "0.000000",
         "east": "644375.544828422",
         "faces": "0",
@@ -144,7 +144,7 @@ class VectorInfoModel(Schema):
         "top": "1.000000",
         "volumes": "0",
         "west": "644375.544828422",
-        "attribute_database": "/tmp/gisdbase_eabed7327ec84d219698670884136c2a/"
+        "attribute_database": "/tmp/gisdbase_eabed7327ec898670884136c2a/"  # noqa: S108
         "nc_spm_08/user1/vector/test_layer/sqlite.db",
         "attribute_database_driver": "sqlite",
         "attribute_layer_name": "test_layer",
