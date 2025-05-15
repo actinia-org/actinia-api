@@ -115,7 +115,7 @@ user_post_doc = {
 
 user_delete_doc = {
     "tags": ["User Management"],
-    "description": "Deletes a user. " "Minimum required user role: admin.",
+    "description": "Deletes a user. Minimum required user role: admin.",
     "parameters": [
         {
             "name": "user_id",
