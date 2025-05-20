@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 #######
 # actinia-core - an open source REST API for scalable, distributed, high
 # performance processing of geographical data that uses GRASS GIS for
@@ -21,14 +20,14 @@
 #
 #######
 
-"""
-Vector layer resources
-"""
-import random
+"""Vector layer resources."""
+import secrets
 from copy import deepcopy
-from flask_restful_swagger_2 import Schema
+
 from actinia_core.models.response_models import ProcessingResponseModel
-from actinia_api.swagger2.actinia_core.schemas.map_layer_base import (
+from flask_restful_swagger_2 import Schema
+
+from actinia_api.swagger2.actinia_grassdata_management_plugin.schemas.map_layer_base import (  # noqa: E501
     SetRegionModel,
 )
 
@@ -41,7 +40,7 @@ __maintainer__ = "mundialis"
 
 
 class VectorAttributeModel(Schema):
-    """Simple model that represent the description of vector attributes"""
+    """Simple model that represent the description of vector attributes."""
 
     description = "Description of a vector map layer attribute"
     type = "object"
@@ -50,7 +49,7 @@ class VectorAttributeModel(Schema):
 
 
 class VectorInfoModel(Schema):
-    """Schema that contains vector map layer information"""
+    """Schema that contains vector map layer information."""
 
     description = "Description of a GRASS GIS vector map layer"
     type = "object"
@@ -115,7 +114,7 @@ class VectorInfoModel(Schema):
         "centroids": "0",
         "comment": "",
         "creator": "soeren",
-        "database": "/tmp/gisdbase_b83bebdb543440c7b9991e2e5602ba91",
+        "database": "/tmp/gisdbase_b83bebdb543440c7b9991e2e5602ba91",  # noqa: S108
         "digitization_threshold": "0.000000",
         "east": "644375.544828422",
         "faces": "0",
@@ -145,7 +144,7 @@ class VectorInfoModel(Schema):
         "top": "1.000000",
         "volumes": "0",
         "west": "644375.544828422",
-        "attribute_database": "/tmp/gisdbase_eabed7327ec84d219698670884136c2a/"
+        "attribute_database": "/tmp/gisdbase_eabed7327ec898670884136c2a/"  # noqa: S108
         "nc_spm_08/user1/vector/test_layer/sqlite.db",
         "attribute_database_driver": "sqlite",
         "attribute_layer_name": "test_layer",
@@ -193,7 +192,7 @@ class VectorInfoResponseModel(ProcessingResponseModel):
                     "inputs": {"map": "geology@PERMANENT"},
                     "module": "v.info",
                 },
-            }
+            },
         ],
         "process_log": [
             {
@@ -297,7 +296,7 @@ class VectorInfoResponseModel(ProcessingResponseModel):
 
 
 class VectorCreationModel(Schema):
-    """Schema for input parameters to generate a random point vector map layer"""
+    """Schema for input parameters to generate a random point vector map layer."""
 
     type = "object"
     properties = {
@@ -312,7 +311,7 @@ class VectorCreationModel(Schema):
             "format": "integer",
             "description": "The seed to initialize the random generator. "
             "If not set the process ID is used",
-            "default": random.randint(0, 1000000),
+            "default": secrets.randbelow(1000000),
         },
         "zmin": {
             "type": "number",
@@ -330,7 +329,7 @@ class VectorCreationModel(Schema):
 
 
 class VectorRegionCreationModel(Schema):
-    """Schema for random vector generation in a specific region"""
+    """Schema for random vector generation in a specific region."""
 
     type = "object"
     properties = {"region": SetRegionModel, "parameter": VectorCreationModel}

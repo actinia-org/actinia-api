@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 #######
 # actinia-core - an open source REST API for scalable, distributed, high
 # performance processing of geographical data that uses GRASS GIS for
@@ -21,14 +20,14 @@
 #
 #######
 
-"""
-STRDS raster map layer management
+"""STRDS raster map layer management.
 
 TODO: Integrate into the ephemeral process chain approach
 """
 from copy import deepcopy
-from flask_restful_swagger_2 import Schema
+
 from actinia_core.models.response_models import ProcessingResponseModel
+from flask_restful_swagger_2 import Schema
 
 __license__ = "GPLv3"
 __author__ = "Sören Gebbert, Carmen Tawalika"
@@ -39,7 +38,7 @@ __maintainer__ = "mundialis"
 
 
 class STRDSRasterListEntryModel(Schema):
-    """Schema that contains list entry
+    """Schema that contains list entry.
 
     columns=id,start_time,end_time,north,south,east,west,min,max,rows,cols
     """
@@ -115,11 +114,11 @@ class STRDSRasterListResponseModel(ProcessingResponseModel):
                         "output": {
                             "name": "/home/soeren/actinia/workspace/temp_db/"
                             "gisdbase_1b72938d2ef54c199f6627b8720f21e1/"
-                            ".tmp/tmptps71vn7"
-                        }
+                            ".tmp/tmptps71vn7",
+                        },
                     },
-                }
-            }
+                },
+            },
         ],
         "process_log": [
             {
@@ -138,7 +137,7 @@ class STRDSRasterListResponseModel(ProcessingResponseModel):
                 "run_time": 0.5023984909057617,
                 "stderr": [""],
                 "stdout": "",
-            }
+            },
         ],
         "process_results": [
             {
@@ -196,6 +195,8 @@ class STRDSRasterListResponseModel(ProcessingResponseModel):
 
 
 class RasterListEntryModel(Schema):
+    """Schema for items for RasterListRegisterModel."""
+
     type = "object"
     properties = {
         "name": {"type": "string"},
@@ -205,6 +206,8 @@ class RasterListEntryModel(Schema):
 
 
 class RasterListRegisterModel(Schema):
+    """Schema for the list of raster map layers to be registered."""
+
     type = "array"
     items = RasterListEntryModel
     example = [

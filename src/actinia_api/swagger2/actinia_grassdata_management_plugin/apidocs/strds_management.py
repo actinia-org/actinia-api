@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 #######
 # actinia-core - an open source REST API for scalable, distributed, high
 # performance processing of geographical data that uses GRASS GIS for
@@ -21,9 +20,7 @@
 #
 #######
 
-"""
-API docs for strds_management
-"""
+"""API docs for strds_management."""
 
 from actinia_core.models.response_models import (
     ProcessingErrorResponseModel,
@@ -31,7 +28,7 @@ from actinia_core.models.response_models import (
     StringListProcessingResultResponseModel,
 )
 
-from actinia_api.swagger2.actinia_core.schemas.strds_management import (
+from actinia_api.swagger2.actinia_grassdata_management_plugin.schemas.strds_management import (  # noqa: E501
     STRDSCreationModel,
     STRDSInfoResponseModel,
 )

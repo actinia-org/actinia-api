@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 #######
 # actinia-core - an open source REST API for scalable, distributed, high
 # performance processing of geographical data that uses GRASS GIS for
@@ -21,20 +20,17 @@
 #
 #######
 
-"""
-API docs for project_management
-"""
+"""API docs for project_management."""
 
 from actinia_core.models.response_models import (
     MapsetInfoResponseModel,
     ProcessingResponseModel,
     SimpleResponseModel,
 )
-from actinia_api.swagger2.actinia_core.schemas.project_management import (
-    ProjectListResponseModel,
-)
+
 from actinia_api.swagger2.actinia_core.schemas.project_management import (
     ProjectionInfoModel,
+    ProjectListResponseModel,
 )
 
 __license__ = "GPLv3"
@@ -72,7 +68,7 @@ get_user_doc = {
             "in": "path",
             "type": "string",
             "default": "nc_spm_08",
-        }
+        },
     ],
     "responses": {
         "200": {
@@ -98,7 +94,7 @@ delete_user_doc = {
             "required": True,
             "in": "path",
             "type": "string",
-        }
+        },
     ],
     "responses": {
         "200": {

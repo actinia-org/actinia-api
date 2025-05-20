@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 #######
 # actinia-core - an open source REST API for scalable, distributed, high
 # performance processing of geographical data that uses GRASS GIS for
@@ -21,9 +20,7 @@
 #
 #######
 
-"""
-Models for api_log_management
-"""
+"""Models for api_log_management."""
 
 from flask_restful_swagger_2 import Schema
 
@@ -85,6 +82,6 @@ class ApiLogListModel(Schema):
             "type": "array",
             "items": ApiLogEntryModel,
             "description": "A list of ApiLogEntryModel objects",
-        }
+        },
     }
     required = ["api_log_list"]

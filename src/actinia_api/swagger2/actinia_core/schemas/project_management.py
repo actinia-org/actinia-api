@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 #######
 # actinia-core - an open source REST API for scalable, distributed, high
 # performance processing of geographical data that uses GRASS GIS for
@@ -21,9 +20,7 @@
 #
 #######
 
-"""
-Models for project_management
-"""
+"""Models for project_management."""
 
 from flask_restful_swagger_2 import Schema
 
@@ -34,13 +31,13 @@ __copyright__ = (
 )
 __maintainer__ = "mundialis GmbH & Co. KG"
 
-from actinia_core.version import init_versions, G_VERSION
+from actinia_core.version import G_VERSION, init_versions
 
 init_versions()
 
 
 class ProjectListResponseModel(Schema):
-    """Response schema for projects lists"""
+    """Response schema for projects lists."""
 
     type = "object"
     properties = {
@@ -74,7 +71,7 @@ class ProjectListResponseModel(Schema):
 
 
 class ProjectionInfoModel(Schema):
-    """Schema to define projection information as JSON input in POST requests"""
+    """Schema to define projection information as JSON input in POST requests."""
 
     type = "object"
     properties = {
@@ -82,7 +79,7 @@ class ProjectionInfoModel(Schema):
             "type": "string",
             "description": "The EPSG code of the projection that should be used "
             "to create a project",
-        }
+        },
     }
     example = {"epsg": "4326"}
     required = ["epsg"]

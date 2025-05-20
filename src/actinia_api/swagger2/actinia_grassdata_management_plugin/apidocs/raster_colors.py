@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 #######
 # actinia-core - an open source REST API for scalable, distributed, high
 # performance processing of geographical data that uses GRASS GIS for
@@ -21,17 +20,15 @@
 #
 #######
 
-"""
-API docs for raster_colors
-"""
+"""API docs for raster_colors."""
 
 from actinia_core.models.response_models import (
-    ProcessingResponseModel,
     ProcessingErrorResponseModel,
+    ProcessingResponseModel,
     StringListProcessingResultResponseModel,
 )
 
-from actinia_api.swagger2.actinia_core.schemas.raster_colors import (
+from actinia_api.swagger2.actinia_grassdata_management_plugin.schemas.raster_colors import (  # noqa: E501
     RasterColorModel,
 )
 

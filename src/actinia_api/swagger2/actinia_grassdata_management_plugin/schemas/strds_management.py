@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 #######
 # actinia-core - an open source REST API for scalable, distributed, high
 # performance processing of geographical data that uses GRASS GIS for
@@ -21,14 +20,14 @@
 #
 #######
 
-"""
-STRDS map layer management
+"""STRDS map layer management.
 
 TODO: Integrate into the ephemeral process chain approach
 """
 from copy import deepcopy
-from flask_restful_swagger_2 import Schema
+
 from actinia_core.models.response_models import ProcessingResponseModel
+from flask_restful_swagger_2 import Schema
 
 __license__ = "GPLv3"
 __author__ = "Sören Gebbert, Carmen Tawalika"
@@ -39,7 +38,7 @@ __maintainer__ = "mundialis"
 
 
 class STRDSInfoModel(Schema):
-    """Schema that contains space-time raster dataset (STRDS) information"""
+    """Schema that contains space-time raster dataset (STRDS) information."""
 
     description = (
         "Information about a specific space-time raster dataset (STRDS)"
@@ -145,8 +144,8 @@ class STRDSInfoResponseModel(ProcessingResponseModel):
                         "type": "strds",
                     },
                     "module": "t.info",
-                }
-            }
+                },
+            },
         ],
         "process_log": [
             {
@@ -160,7 +159,7 @@ class STRDSInfoResponseModel(ProcessingResponseModel):
                 "run_time": 0.4944636821746826,
                 "stderr": [""],
                 "stdout": "...",
-            }
+            },
         ],
         "process_results": {
             "aggregation_type": "None",
@@ -210,7 +209,7 @@ class STRDSInfoResponseModel(ProcessingResponseModel):
 
 
 class STRDSCreationModel(Schema):
-    """Schema for STRDS creation"""
+    """Schema for STRDS creation."""
 
     description = "Information required to create a new STRDS"
     type = "object"

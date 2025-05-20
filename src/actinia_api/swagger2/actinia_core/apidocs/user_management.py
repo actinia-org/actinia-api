@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 #######
 # actinia-core - an open source REST API for scalable, distributed, high
 # performance processing of geographical data that uses GRASS GIS for
@@ -21,14 +20,12 @@
 #
 #######
 
-"""
-API docs for user_management
-"""
+"""API docs for user_management."""
 
 from actinia_core.models.response_models import (
+    SimpleResponseModel,
     UserInfoResponseModel,
     UserListResponseModel,
-    SimpleResponseModel,
 )
 
 __license__ = "GPLv3"
@@ -44,7 +41,7 @@ user_list_get_doc = {
         "200": {
             "description": "This response returns a list of user names.",
             "schema": UserListResponseModel,
-        }
+        },
     },
 }
 
@@ -60,7 +57,7 @@ user_get_doc = {
             "required": True,
             "in": "path",
             "type": "string",
-        }
+        },
     ],
     "responses": {
         "200": {
@@ -117,7 +114,7 @@ user_post_doc = {
 
 user_delete_doc = {
     "tags": ["User Management"],
-    "description": "Deletes a user. " "Minimum required user role: admin.",
+    "description": "Deletes a user. Minimum required user role: admin.",
     "parameters": [
         {
             "name": "user_id",
@@ -125,7 +122,7 @@ user_delete_doc = {
             "required": True,
             "in": "path",
             "type": "string",
-        }
+        },
     ],
     "responses": {
         "200": {
