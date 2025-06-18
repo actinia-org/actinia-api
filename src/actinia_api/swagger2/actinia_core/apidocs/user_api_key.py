@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 #######
 # actinia-core - an open source REST API for scalable, distributed, high
 # performance processing of geographical data that uses GRASS GIS for
@@ -21,9 +20,7 @@
 #
 #######
 
-"""
-API docs for user_api_key
-"""
+"""API docs for user_api_key."""
 
 from actinia_api.swagger2.actinia_core.schemas.user_api_key import (
     TokenResponseModel,
@@ -66,7 +63,7 @@ token_get_doc = {
             "in": "query",
             "type": "integer",
             "default": 86400,
-        }
+        },
     ],
     "responses": {
         "200": {

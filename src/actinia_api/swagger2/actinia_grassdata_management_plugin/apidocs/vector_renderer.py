@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 #######
 # actinia-core - an open source REST API for scalable, distributed, high
 # performance processing of geographical data that uses GRASS GIS for
@@ -21,9 +20,7 @@
 #
 #######
 
-"""
-API docs for strds_renderer
-"""
+"""API docs for vector_renderer."""
 
 from actinia_core.models.response_models import (
     ProcessingErrorResponseModel,
@@ -35,11 +32,9 @@ __copyright__ = "Copyright 2016-2022, mundialis GmbH & Co. KG"
 __maintainer__ = "mundialis GmbH & Co. KG"
 
 get_doc = {
-    "tags": ["STRDS Management"],
-    "description": "Render the raster map layers of a specific STRDS as a "
-    "single image. All raster layers are rendered in order "
-    "of their time stamps, from past to future. "
-    "Minimum required user role: user.",
+    "tags": ["Vector Management"],
+    "description": "Render a single vector map layer. Minimum required user "
+    "role: user.",
     "parameters": [
         {
             "name": "project_name",
@@ -59,12 +54,12 @@ get_doc = {
             "default": "PERMANENT",
         },
         {
-            "name": "strds_name",
-            "description": "The name of the STRDS to render",
+            "name": "vector_name",
+            "description": "The name of the vector map layer to render",
             "required": True,
             "in": "path",
             "type": "string",
-            "default": "elevation",
+            "default": "boundary_county",
         },
         {
             "name": "n",
@@ -115,22 +110,6 @@ get_doc = {
             "type": "number",
             "format": "integer",
             "default": 600,
-        },
-        {
-            "name": "start_time",
-            "description": "Raster map layers that have equal or greater "
-            "the start time will be rendered",
-            "required": False,
-            "in": "query",
-            "type": "string",
-        },
-        {
-            "name": "end_time",
-            "description": "Raster map layers that have equal or lower the "
-            "end time will be rendered",
-            "required": False,
-            "in": "query",
-            "type": "string",
         },
     ],
     "produces": ["image/png"],

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 #######
 # actinia-core - an open source REST API for scalable, distributed, high
 # performance processing of geographical data that uses GRASS GIS for
@@ -21,9 +20,7 @@
 #
 #######
 
-"""
-API docs for resource_management
-"""
+"""API docs for resource_management."""
 
 from actinia_core.core.common.process_chain import ProcessChainModel
 from actinia_core.models.response_models import (
@@ -209,7 +206,7 @@ resources_delete_doc = {
             "required": True,
             "in": "path",
             "type": "string",
-        }
+        },
     ],
     "responses": {
         "200": {

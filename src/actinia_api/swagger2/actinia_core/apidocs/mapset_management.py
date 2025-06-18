@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 #######
 # actinia-core - an open source REST API for scalable, distributed, high
 # performance processing of geographical data that uses GRASS GIS for
@@ -21,14 +20,12 @@
 #
 #######
 
-"""
-API docs for mapset_management
-"""
+"""API docs for mapset_management."""
 
 from actinia_core.models.response_models import (
     MapsetInfoResponseModel,
-    ProcessingResponseModel,
     ProcessingErrorResponseModel,
+    ProcessingResponseModel,
     StringListProcessingResultResponseModel,
 )
 
@@ -54,7 +51,7 @@ get_doc = {
             "in": "path",
             "type": "string",
             "default": "nc_spm_08",
-        }
+        },
     ],
     "responses": {
         "200": {

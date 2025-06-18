@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 #######
 # actinia-core - an open source REST API for scalable, distributed, high
 # performance processing of geographical data that uses GRASS GIS for
@@ -21,14 +20,12 @@
 #
 #######
 
-"""
-API docs for process_validation
-"""
+"""API docs for process_validation."""
 
 from actinia_core.core.common.process_chain import ProcessChainModel
 from actinia_core.models.response_models import (
-    ProcessingResponseModel,
     ProcessingErrorResponseModel,
+    ProcessingResponseModel,
 )
 
 __license__ = "GPLv3"

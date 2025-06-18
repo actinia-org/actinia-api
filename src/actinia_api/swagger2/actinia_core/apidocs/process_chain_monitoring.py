@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 #######
 # actinia-core - an open source REST API for scalable, distributed, high
 # performance processing of geographical data that uses GRASS GIS for
@@ -21,9 +20,7 @@
 #
 #######
 
-"""
-API docs for process_chain_monitoring
-"""
+"""API docs for process_chain_monitoring."""
 
 from actinia_core.models.response_models import SimpleResponseModel
 
@@ -31,7 +28,6 @@ from actinia_api.swagger2.actinia_core.schemas.process_chain_monitoring import (
     MapsetSizeResponseModel,
     MaxMapsetSizeResponseModel,
 )
-
 
 __license__ = "GPLv3"
 __author__ = "Anika Weinmann, Carmen Tawalika"

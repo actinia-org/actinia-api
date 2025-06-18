@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 #######
 # actinia-core - an open source REST API for scalable, distributed, high
 # performance processing of geographical data that uses GRASS GIS for
@@ -21,14 +20,13 @@
 #
 #######
 
-"""
-API docs for api_log_management
-"""
+"""API docs for api_log_management."""
+
+from actinia_core.models.response_models import SimpleResponseModel
 
 from actinia_api.swagger2.actinia_core.schemas.api_log_management import (
     ApiLogListModel,
 )
-from actinia_core.models.response_models import SimpleResponseModel
 
 __license__ = "GPLv3"
 __author__ = "Sören Gebbert, Anika Weinmann"
@@ -50,7 +48,7 @@ get_doc = {
             "required": True,
             "in": "path",
             "type": "string",
-        }
+        },
     ],
     "responses": {
         "200": {

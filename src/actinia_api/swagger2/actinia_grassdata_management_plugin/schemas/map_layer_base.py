@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 #######
 # actinia-core - an open source REST API for scalable, distributed, high
 # performance processing of geographical data that uses GRASS GIS for
@@ -21,9 +20,7 @@
 #
 #######
 
-"""
-Model for Base layer resources
-"""
+"""Model for Base layer resources."""
 
 from flask_restful_swagger_2 import Schema
 
@@ -36,7 +33,7 @@ __maintainer__ = "mundialis"
 
 
 class SetRegionModel(Schema):
-    """This schema represents the computational region definition for raster
+    """Schema representing the computational region definition for raster
     and vector map layers.
 
        n : for north

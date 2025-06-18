@@ -1,0 +1,15 @@
+# Extends https://github.com/mundialis/github-workflows/blob/main/linting-config-examples/ruff.toml
+
+lint.ignore = [
+    "BLE001",  # BLE001 Do not catch blind exception: `Exception
+    "D205",  # D205 1 blank line required between summary line and description
+    "E501",  # E501 Line too long (ignore here, flake checks with 88 lines)
+    "RUF012",  # RUF012 Mutable class attributes should be annotated with `typing.ClassVar`
+    "RUF100",  # RUF100 [*] Unused `noqa` directive (non-enabled: `E501`) - needed for flake8
+]
+
+# [lint.per-file-ignores]
+# "src/actinia_grassdata_management_plugin/apidocs/__init__.py" = [ "E501",]
+
+# Online ignores of
+# S108 Probable insecure usage of temporary file or directory
