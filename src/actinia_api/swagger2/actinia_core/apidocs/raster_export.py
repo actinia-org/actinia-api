@@ -35,10 +35,10 @@ __maintainer__ = "mundialis GmbH & Co. KG"
 post_doc = {
     "tags": ["Raster Management"],
     "description": "Export an existing raster map layer as GTiff or COG "
-    "(if COG driver available). The link to the exported "
-    "raster map layer is located in the JSON response."
-    "The current region settings of the mapset are used to "
-    "export the raster layer. Minimum required user role: user.",
+    "(if COG driver available). The current region settings of the "
+    "mapset are used for the export. The response contains a status URL "
+    "to retrieve the exported raster map layer after processing has "
+    "finished. Minimum required user role: user.",
     "parameters": [
         {
             "name": "project_name",
@@ -86,9 +86,11 @@ post_doc = {
 region_post_doc = {
     "tags": ["Raster Management"],
     "description": "Export an existing raster map layer as GTiff or COG "
-    "(if COG driver available). The link to the exported "
-    "raster map layer is located in the JSON response. "
-    "Minimum required user role: user.",
+    "(if COG driver available). The region is set to the selected raster "
+    "map layer before export, so its extent and resolution are used. The "
+    "export may fail if the raster exceeds the user's cell limit. The "
+    "response contains a status URL to retrieve the exported raster map "
+    "layer after processing has finished. Minimum required user role: user.",
     "parameters": [
         {
             "name": "project_name",

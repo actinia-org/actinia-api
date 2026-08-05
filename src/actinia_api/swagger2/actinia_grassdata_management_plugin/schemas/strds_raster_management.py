@@ -24,6 +24,7 @@
 
 TODO: Integrate into the ephemeral process chain approach
 """
+
 from copy import deepcopy
 
 from actinia_core.models.response_models import ProcessingResponseModel
@@ -127,10 +128,14 @@ class STRDSRasterListResponseModel(ProcessingResponseModel):
                     "input=precipitation_1950_2013_yearly_mm@PERMANENT",
                     "where=start_time>'2010-01-01'",
                     "separator=|",
-                    "columns=id,start_time,end_time,north,south,east,west,min,"
-                    "max,rows,cols",
-                    "output=/home/soeren/actinia/workspace/temp_db/"
-                    "gisdbase_1b72938d2ef54c199f6627b8720f21e1/.tmp/tmptps71vn7",
+                    (
+                        "columns=id,start_time,end_time,north,south,east,west,min,"
+                        "max,rows,cols"
+                    ),
+                    (
+                        "output=/home/soeren/actinia/workspace/temp_db/"
+                        "gisdbase_1b72938d2ef54c199f6627b8720f21e1/.tmp/tmptps71vn7"
+                    ),
                     "-u",
                 ],
                 "return_code": 0,

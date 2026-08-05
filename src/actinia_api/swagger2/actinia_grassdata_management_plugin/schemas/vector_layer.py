@@ -21,6 +21,7 @@
 #######
 
 """Vector layer resources."""
+
 import secrets
 from copy import deepcopy
 
@@ -217,8 +218,10 @@ class VectorInfoResponseModel(ProcessingResponseModel):
                 "return_code": 0,
                 "run_time": 0.050185441970825195,
                 "stderr": [
-                    "Displaying column types/names for database connection of "
-                    "layer <1>:",
+                    (
+                        "Displaying column types/names for database connection of "
+                        "layer <1>:"
+                    ),
                     "",
                 ],
                 "stdout": "...",

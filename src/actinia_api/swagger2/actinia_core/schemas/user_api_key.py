@@ -28,6 +28,7 @@ in the kvdb database via REST API calls.
 TODO: Implement POST full permission creation
       Implement PUT to modify existing users
 """
+
 from flask_restful_swagger_2 import Schema
 
 __license__ = "GPLv3"
